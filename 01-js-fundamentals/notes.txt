@@ -2,3 +2,7 @@ WHAT IS JAVASCRIPT
 - JavaScript is high-level, object-oriented programming language that ismainly used for web-development.
 - JavaScript gets updated every year. Current biggest update is 2015 version ES6.
 
+LINKING A JAVASCRIPT FILE 
+- When adding JS logic to the website we can directly include it into the HTML file, by adding <script> tag inside <head> and writing the code inside this tag. Thi method is called 'inline'. It is good for not including extra file, but it doesn't separate JS from HTML which is not wanted for clear code.
+- We can make a separate file for JS code and then link it by adding an empty script tag at the end of the <body> and specifying the location of the script file using 'src' attribute. 
+
