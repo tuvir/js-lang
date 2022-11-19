@@ -6,3 +6,9 @@ LINKING A JAVASCRIPT FILE
 - When adding JS logic to the website we can directly include it into the HTML file, by adding <script> tag inside <head> and writing the code inside this tag. Thi method is called 'inline'. It is good for not including extra file, but it doesn't separate JS from HTML which is not wanted for clear code.
 - We can make a separate file for JS code and then link it by adding an empty script tag at the end of the <body> and specifying the location of the script file using 'src' attribute. 
 
+VALUES AND VARIABLES
+- Value is a smallest piece of information. It can be a number, letter word or string of words. We can interract differently with values, for example, logging them into the console or use mathematical operations on them.
+- The core value operation is assingnment, by which we can store a value inside the variable and have access to it.
+- To declare a variable we use 'let' keyword after which we specify the variable name (written in lower camel case) and then we assign a value to the variable. Numerical value can be written as it is, text value is enclosed in quotes.
+- A constant value, like PI number should have varaible named in all caps, like 'let PI' rather than 'let Pi'.
+- Variable names should be descriptive, to make it easy to understand which value does it hold.

@@ -1,2 +1,5 @@
 let js = "amazing";
-if (js === "amazing") alert("JavaScript is Fun!");
+
+let firstName = 'Petr';
+console.log(firstName);
+console.log(firstName);
