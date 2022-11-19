@@ -1,0 +1,4 @@
+WHAT IS JAVASCRIPT
+- JavaScript is high-level, object-oriented programming language that ismainly used for web-development.
+- JavaScript gets updated every year. Current biggest update is 2015 version ES6.
+
