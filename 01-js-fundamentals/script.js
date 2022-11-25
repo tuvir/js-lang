@@ -73,9 +73,22 @@ console.log(Number(bool));
 console.log (str + bool - num);
 console.log (bool - num);
 */
-console.log('9' - '5');
-console.log('19' - '13' + '17');
-console.log('19' - '13' + 17);
-console.log('123' > 57);
-console.log(5 + 6 + '4' + 9 - 4 - 2);
+/*
+const age = 18;
+if(age === 18) {
+    console.log('Age is strict!');
 
+}
+if(age == 18) {
+    console.log('Age is loose!');
+}
+
+const favNumber = Number(prompt(`What is your favourite number?`));
+if(favNumber === 23) {
+    console.log(`Cool! 23 is a cool number!`);
+} else if(favNumber === 7) {
+    console.log(`7 is also a cool number`);
+} else {
+    console.log(`You did not find it`);
+}
+*/

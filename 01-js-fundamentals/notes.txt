@@ -69,3 +69,9 @@ TRUTHY AND FALSY VALUES
 - Falsy values are the ones that are not exactly false, but will become false if we convert them to boolean.
 - There are 5 falsy values in JavaScript: 0, '', undefined, null, NaN. 'false' is the original boolean false value.
 - Almost always falsy and truthy values convert into boolean value automaticaly, through type coersion.
+
+EQUALITY OPERATORS
+- In JavaScript there are two equality checking operators: '==' loose equality operator, which does type coersion, and '===' strict equality operator, which doesn't do type coersion.
+- Examples: 18 == '18' will result in 'true' since '==' operator converts number to string. But 18 === '18 will give you 'false' since '===' doensn't convert the types.
+- In general, loose equality operator is almost never used, to avoid unclear bugs. For clean code, try to always use strict equality operator.
+- To check whether the value is NOT equal to something, we use inequality operator. Same as equality operators, there are two versions of inequality operator: '!=' loose inequality and '!==' strict inequality. The last one is preferable.
