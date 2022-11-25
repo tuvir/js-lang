@@ -36,10 +36,29 @@ let x, y;
 x = y = 25 - 15 - 1;
 console.log(x, y);
 */
-
+/*
 const firstName = 'Petr';
 const currentAge = 2022;
 const birthAge = 2003;
 const myJob = 'pastry chef'
 const petr = `I'm ${firstName}, a ${currentAge - birthAge} year old ${myJob}`
 console.log(petr);
+*/
+
+const age = 10;
+const drivingAge = 18
+if (age >= drivingAge) {
+    console.log(`You are old enough to get drivers licence!`)
+} else {
+    const yearsLeft = drivingAge - age;
+    console.log(`You are too young to drive, wait ${yearsLeft} years more :)`)
+}
+
+const birthYear = 1999;
+let century;
+if (birthYear >= 2000) {
+    century = 21;
+} else {
+    century = 20;
+}
+console.log(century);

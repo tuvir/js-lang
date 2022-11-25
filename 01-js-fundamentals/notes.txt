@@ -50,3 +50,6 @@ STRINGS AND TEMPLATE LITERALS
 - To make a template literal we enclose the string in backticks. It's syntax is such: `text ${variable}`;.
 - We can write text-only strings using backticks, instead of quotes. This is useful, since if we need to add variables or quotes inside the string we do not need to add or change quotes.
 - To make multilie strings backticks are better, since you don't need to include '\n' escpae sequence rather than just pressing Enter.
+
+DECISION MAKING
+- String literals are supreme!
