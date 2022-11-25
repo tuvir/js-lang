@@ -12,3 +12,18 @@ VALUES AND VARIABLES
 - To declare a variable we use 'let' keyword after which we specify the variable name (written in lower camel case) and then we assign a value to the variable. Numerical value can be written as it is, text value is enclosed in quotes.
 - A constant value, like PI number should have varaible named in all caps, like 'let PI' rather than 'let Pi'.
 - Variable names should be descriptive, to make it easy to understand which value does it hold.
+
+DATA TYPES
+- in JavaScript there are two types of values - objects, which are values that have multiple values on it's own, and primitives, which hve only one specific value. There are seven primitives.
+- Number. For both inegers and decimals. let age = 18;
+- String. Sequence of characters, used for text. let firstName = 'petr';
+- Boolean. Only 'true' or 'false', used for decision making. let fullAge = true;
+- Undefined. Value of yet undefined variable. let children;
+- Null. Means 'empty value'.
+- Symbol (ES2015) - unique value that can't be changed.
+- Bigint (ES2020) - Stores larger numbers than Number type can hold.
+- JavaScript has dynamic typing, which means that you don't need to manually define the data type of a value which variable will store. Instead thge type is determined automatically.
+- In JavaScript VALUES have the type, not VARIABLES.
+- 'typeof' operator can be used to print the type value of a variable or just value as a string.
+- To change the value of a variable, we simply assing it to the variable. We do not need to use 'let' keyword again.
+- There is a JavaScript language bug, regarding typeof null. If we try to console.log typeof null, it will say that it's type is 'object', rather than 'null'.
