@@ -44,3 +44,9 @@ OPERATORS IN JAVASCRIPT
 
 CODING CHALLENGE N1
 - When learning, you can use const whenever, even if tha variable can be change in general, it is okay, as long as it doesn't change in the scope of your program.
+
+STRINGS AND TEMPLATE LITERALS
+- Second method of forming strings is called template literals, which allows us to write a string in a normal way and then inserting the variables inside of it.
+- To make a template literal we enclose the string in backticks. It's syntax is such: `text ${variable}`;.
+- We can write text-only strings using backticks, instead of quotes. This is useful, since if we need to add variables or quotes inside the string we do not need to add or change quotes.
+- To make multilie strings backticks are better, since you don't need to include '\n' escpae sequence rather than just pressing Enter.

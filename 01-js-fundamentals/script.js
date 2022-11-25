@@ -31,8 +31,15 @@ console.log(firstName + ' ' + lastName);
 console.log(agePetr > ageDanil);
 console.log(agePetr >= 17);
 */
-
+/*
 let x, y;
 x = y = 25 - 15 - 1;
 console.log(x, y);
+*/
 
+const firstName = 'Petr';
+const currentAge = 2022;
+const birthAge = 2003;
+const myJob = 'pastry chef'
+const petr = `I'm ${firstName}, a ${currentAge - birthAge} year old ${myJob}`
+console.log(petr);
