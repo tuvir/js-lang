@@ -47,3 +47,6 @@ if (population > populationAverage) {
     console.log(`${country}'s population is ${populationAverage - population} million below average`)
 }
 
+// ASSINGNMENT 7
+console.log('\n' + 'ASSINGNMENT 7');
+

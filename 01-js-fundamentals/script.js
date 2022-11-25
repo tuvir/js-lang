@@ -63,7 +63,7 @@ if (birthYear >= 2000) {
 }
 console.log(century);
 */
-
+/*
 const bool = false;
 const str = 'string';
 const num = 10;
@@ -72,5 +72,10 @@ console.log (num - bool);
 console.log(Number(bool));
 console.log (str + bool - num);
 console.log (bool - num);
-
+*/
+console.log('9' - '5');
+console.log('19' - '13' + '17');
+console.log('19' - '13' + 17);
+console.log('123' > 57);
+console.log(5 + 6 + '4' + 9 - 4 - 2);
 

@@ -64,3 +64,8 @@ TYPE CONVERSION AND COERCION
 - This process is often done when both string and numbers are included. For example, when we concatenate strings and numbers, numbers will aoutomatically turn into strings.
 - Code examples: ('string' + 1) = string1 (type is string); ('10' - '1' - 2) = 7 (type will be number, NOT string).
 - In general, when strings and numbers are together in one expresiion, '+' will count as concatenation operator and will turn numbers into strings. But operators '/', '*' and '-' will turn numerical string into actual numbers and perform the mathematic operations on them.
+
+TRUTHY AND FALSY VALUES
+- Falsy values are the ones that are not exactly false, but will become false if we convert them to boolean.
+- There are 5 falsy values in JavaScript: 0, '', undefined, null, NaN. 'false' is the original boolean false value.
+- Almost always falsy and truthy values convert into boolean value automaticaly, through type coersion.
