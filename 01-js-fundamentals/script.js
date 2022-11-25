@@ -17,7 +17,7 @@ let firstName = 'Petr';
 console.log(firstName);
 console.log(firstName);
 */
-
+/*
 const currentYear = 2022;
 const agePetr = currentYear - 2003;
 const ageDanil = currentYear - 1995;
@@ -30,4 +30,9 @@ console.log(firstName + ' ' + lastName);
 
 console.log(agePetr > ageDanil);
 console.log(agePetr >= 17);
+*/
+
+let x, y;
+x = y = 25 - 15 - 1;
+console.log(x, y);
 

@@ -40,3 +40,7 @@ OPERATORS IN JAVASCRIPT
 - '**' operator is power operator. 2 ** 3 = 8, which is 2 in power of 3.
 - '+' operator is used not only for adding numbers, but also fo string concatination, which is adding multiple strings of text together. String concatenation is a powerful JavaScript tool. We can cocatenate both text strings, empty strings and special symbols.
 - '=' is an assingnment operator. It's usually used for assingning values to the variable.
+- For compiler to know which operations to execute first, operator precedence system is made. Each operator has it's own priority number, operators with higher priopity are executed first.
+
+CODING CHALLENGE N1
+- When learning, you can use const whenever, even if tha variable can be change in general, it is okay, as long as it doesn't change in the scope of your program.
