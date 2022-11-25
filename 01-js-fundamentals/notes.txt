@@ -27,3 +27,16 @@ DATA TYPES
 - 'typeof' operator can be used to print the type value of a variable or just value as a string.
 - To change the value of a variable, we simply assing it to the variable. We do not need to use 'let' keyword again.
 - There is a JavaScript language bug, regarding typeof null. If we try to console.log typeof null, it will say that it's type is 'object', rather than 'null'.
+
+LET, CONST, VAR
+- The proccess of assigning a new value to the variable is called 'mutating' a variable.
+- let keyword creates a variable, that can be changed at any point of the program.
+- const keyword is used, to create a variable that cannot be reasigned. When using const we always need to initialize it with some value.
+- To make clean code, using const whenever possible is required. Let should only be used in cases when you know for certain that value of the variable will change.
+- var keyword is kinda same as let, but it's rarely used.
+
+OPERATORS IN JAVASCRIPT
+- JavaScript has all of the basic mathematical operators, with addition of some unique ones.
+- '**' operator is power operator. 2 ** 3 = 8, which is 2 in power of 3.
+- '+' operator is used not only for adding numbers, but also fo string concatination, which is adding multiple strings of text together. String concatenation is a powerful JavaScript tool. We can cocatenate both text strings, empty strings and special symbols.
+- '=' is an assingnment operator. It's usually used for assingning values to the variable.
