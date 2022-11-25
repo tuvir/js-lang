@@ -44,7 +44,7 @@ const myJob = 'pastry chef'
 const petr = `I'm ${firstName}, a ${currentAge - birthAge} year old ${myJob}`
 console.log(petr);
 */
-
+/*
 const age = 10;
 const drivingAge = 18
 if (age >= drivingAge) {
@@ -62,3 +62,15 @@ if (birthYear >= 2000) {
     century = 20;
 }
 console.log(century);
+*/
+
+const bool = false;
+const str = 'string';
+const num = 10;
+console.log (str + bool);
+console.log (num - bool);
+console.log(Number(bool));
+console.log (str + bool - num);
+console.log (bool - num);
+
+

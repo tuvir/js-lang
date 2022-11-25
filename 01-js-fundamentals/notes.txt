@@ -53,3 +53,14 @@ STRINGS AND TEMPLATE LITERALS
 
 DECISION MAKING
 - String literals are supreme!
+
+TYPE CONVERSION AND COERCION
+- Since JavaScript is dynamically typed language, we can and often should manipulate the data types of different values to make the program work as expected. This is called 'type conversion' and usually is done manually. For example, if user types the age of his birth, the value is set as a string. So for us to make mathematical operations with it, we need to first conver string to a number.
+- In this case, we can use 'Number()' function.
+- NaN (stands for 'Not a number') is a special number, that is produced when operation with numbers couldn't produce another number.
+- To convert number into string we use 'String()' function. Function names always start from capital letter.
+- JavaScript can convert only 3 types: booleans, numbers and strings. In some cases, certian values of one type cannot be converted into another type.
+- Another way of changing types is called 'type coercion'. JavaScript compiler automatically changes the types of values that are conflicting to form a complete result.
+- This process is often done when both string and numbers are included. For example, when we concatenate strings and numbers, numbers will aoutomatically turn into strings.
+- Code examples: ('string' + 1) = string1 (type is string); ('10' - '1' - 2) = 7 (type will be number, NOT string).
+- In general, when strings and numbers are together in one expresiion, '+' will count as concatenation operator and will turn numbers into strings. But operators '/', '*' and '-' will turn numerical string into actual numbers and perform the mathematic operations on them.
