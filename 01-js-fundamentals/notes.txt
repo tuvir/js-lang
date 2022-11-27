@@ -84,4 +84,11 @@ BOOLEAN LOGIC AND LOGICAL OPERATORS
 SWITCH CASES
 - Switch case is an another method to compare different values, similar to else if structure, but with less code.
 - Alwsys put break at the end of each switch case, otherwise code will continue to execute.
-- Switch case does strict comparison, so it will not work desirably if iput data is somewhat incorrect.
+- Switch case does strict comparison, so it will not work desirably if input data is somewhat incorrect.
+
+STATEMENTS AND EXPRESSIONS, TERNARY OPERATOR
+- Expression always produces a value, statement doesn't produce a vale.
+- In some code constructions JavaScript only expects an expression not a statement to be placed. For example, in template literals we cna only place expressions, not statements.
+- Ternary operator can be used istead single if\else block.
+- Since it's an operator, it will produce a value, thus we can use ternary operator to assign one of two values to one variable.
+- Ternary operator can be inserted right into template literal.

@@ -136,6 +136,7 @@ switch(day) {
     break
 }
 */
+/*
 if(day === 'monday') {
     console.log('1');
 } else if (day === 'tuesday') {
@@ -153,3 +154,9 @@ if(day === 'monday') {
 } else {
     console.log('Not a valid day');
 }
+*/
+
+const age = 67;
+
+const drink = age >= 18 ? 'wine' : 'water';
+console.log(`I like to drink ${drink}`);
