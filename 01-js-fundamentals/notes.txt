@@ -96,3 +96,5 @@ STATEMENTS AND EXPRESSIONS, TERNARY OPERATOR
 JAVASCRIPT RELEASES
 - When developing a javascript project, use a latest  version chrome browser to access latest javascript features.
 - When shipping the final version of the product, Babel can be used to transpile the code basae to the ES5 standarts.
+
+JAVASCRIPT STRICT MODE
