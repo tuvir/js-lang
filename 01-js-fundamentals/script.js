@@ -92,3 +92,19 @@ if(favNumber === 23) {
     console.log(`You did not find it`);
 }
 */
+
+let hasDriversLicence = true;
+let hasGoodEyesight = false;
+console.log(hasDriversLicence || hasGoodEyesight);
+console.log(hasDriversLicence && hasGoodEyesight);
+if (hasDriversLicence && hasGoodEyesight) {
+    console.log(`Sarah can drive!`);
+} else {
+    console.log(`Someone else should drive`);
+}
+let isTired = true;
+if (hasDriversLicence && hasGoodEyesight && !isTrue) {
+    console.log(`Sarah can drive!`);
+} else {
+    console.log(`Someone else should drive`);
+}

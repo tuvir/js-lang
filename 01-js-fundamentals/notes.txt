@@ -72,6 +72,11 @@ TRUTHY AND FALSY VALUES
 
 EQUALITY OPERATORS
 - In JavaScript there are two equality checking operators: '==' loose equality operator, which does type coersion, and '===' strict equality operator, which doesn't do type coersion.
-- Examples: 18 == '18' will result in 'true' since '==' operator converts number to string. But 18 === '18 will give you 'false' since '===' doensn't convert the types.
+- Examples: 18 == '18' will result in 'true' since '==' operator converts number to string. But 18 === '18' will give you 'false' since '===' doensn't convert the types.
 - In general, loose equality operator is almost never used, to avoid unclear bugs. For clean code, try to always use strict equality operator.
 - To check whether the value is NOT equal to something, we use inequality operator. Same as equality operators, there are two versions of inequality operator: '!=' loose inequality and '!==' strict inequality. The last one is preferable.
+
+BOOLEAN LOGIC AND LOGICAL OPERATORS
+- Three boolean operators are '||' or, '&&' and, '!' not.
+- We use this operators in complex decision making, when there are multiple rules to be met.
+- In general, when '&&' is used, even one false value will result in false. When '||' is used even one true value will result in true.
