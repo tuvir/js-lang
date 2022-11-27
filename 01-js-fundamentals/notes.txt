@@ -92,3 +92,7 @@ STATEMENTS AND EXPRESSIONS, TERNARY OPERATOR
 - Ternary operator can be used istead single if\else block.
 - Since it's an operator, it will produce a value, thus we can use ternary operator to assign one of two values to one variable.
 - Ternary operator can be inserted right into template literal.
+
+JAVASCRIPT RELEASES
+- When developing a javascript project, use a latest  version chrome browser to access latest javascript features.
+- When shipping the final version of the product, Babel can be used to transpile the code basae to the ES5 standarts.
