@@ -19,7 +19,7 @@ console.log(typeof language);
 
 // ASSINGNMENT 3
 console.log('\n' + 'ASSINGNMENT 3');
-language = 'russian';
+language = 'mandarin';
 
 
 // ASSINGNMENT 4
@@ -58,6 +58,7 @@ console.log(5 + 6 + '4' + 9 - 4 - 2);
 
 // ASSINGNMENT 8
 console.log('\n' + 'ASSINGNMENT 8');
+/*
 const numNeighbours = Number(prompt(`How many neighbour countries does your country 
 have?'`))
 if(numNeighbours === 1) {
@@ -66,4 +67,37 @@ if(numNeighbours === 1) {
     console.log(`More than 1 border`);
 } else {
     console.log(`No borders`);
+}
+*/
+
+// ASSINGNMENT 9
+console.log('\n' + 'ASSINGNMENT 9');
+if(population < 50 && isIsland === false && language === 'english') {
+    console.log(`You should live here!`);
+} else {
+    console.log(`This country doesn't suit you!`);
+}
+
+// ASSINGNMENT 10
+console.log('\n' + 'ASSINGNMENT 10');
+switch(language) {
+    case 'chinese':
+    case 'mandarin':
+        console.log(`MOST number of native speakers!`);
+    break;
+    case 'spanish':
+        console.log('2nd place in number of native speakers');
+    break;
+    case 'english':
+        console.log(`3rd place`);
+    break;
+    case 'hindi':
+        console.log(`4th place`);
+    break;
+    case 'arabic':
+        console.log(`5th place`);
+    break;
+    default:
+        console.log(`Great language too!`);
+    break;
 }

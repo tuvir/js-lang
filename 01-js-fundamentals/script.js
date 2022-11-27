@@ -92,7 +92,7 @@ if(favNumber === 23) {
     console.log(`You did not find it`);
 }
 */
-
+/*
 let hasDriversLicence = true;
 let hasGoodEyesight = false;
 console.log(hasDriversLicence || hasGoodEyesight);
@@ -107,4 +107,49 @@ if (hasDriversLicence && hasGoodEyesight && !isTrue) {
     console.log(`Sarah can drive!`);
 } else {
     console.log(`Someone else should drive`);
+}
+*/
+
+const day = 'mo';
+/*
+switch(day) {
+    case 'monday':
+        console.log(`Do javascript`);
+    break;
+    case 'tuesday':
+        console.log(`Cook a dinner`);
+    break
+    case 'wednesday':
+        console.log(`Cook a dinner`);
+    break
+    case 'thursday':
+        console.log(`Cook a dinner`);
+    break
+    case 'friday':
+        console.log(`Cook a dinner`);
+    break
+    case 'saturday':
+        console.log(`Cook a dinner`);
+    break
+    case 'sunday':
+        console.log(`Cook a dinner`);
+    break
+}
+*/
+if(day === 'monday') {
+    console.log('1');
+} else if (day === 'tuesday') {
+    console.log('2');
+} else if (day === 'wednesday') {
+    console.log('3');
+} else if (day === 'thursday') {
+    console.log('4');
+} else if (day === 'friday') {
+    console.log('5');
+} else if (day === 'saturday') {
+    console.log('6');
+} else if (day === 'sunday') {
+    console.log('7');
+} else {
+    console.log('Not a valid day');
 }

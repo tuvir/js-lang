@@ -80,3 +80,8 @@ BOOLEAN LOGIC AND LOGICAL OPERATORS
 - Three boolean operators are '||' or, '&&' and, '!' not.
 - We use this operators in complex decision making, when there are multiple rules to be met.
 - In general, when '&&' is used, even one false value will result in false. When '||' is used even one true value will result in true.
+
+SWITCH CASES
+- Switch case is an another method to compare different values, similar to else if structure, but with less code.
+- Alwsys put break at the end of each switch case, otherwise code will continue to execute.
+- Switch case does strict comparison, so it will not work desirably if iput data is somewhat incorrect.
