@@ -32,3 +32,11 @@ if((coalasScore === dolphinsScore) && (dolphinsScore >= 100) &&
 } else {
     console.log(`No one won!`);
 }
+
+// CHALLENGE 4
+console.log(`CHALLENGE 4 \n`);
+const billValue = 350;
+const tipMultiplier = billValue >= 50 && billValue <= 300 ? 15 : 20;
+const tipValue = (tipMultiplier * (billValue / 100));
+const totalValue = tipValue + billValue;
+console.log(`The bill was ${billValue}, the tip was ${tipValue} and the total value is ${totalValue}`);
