@@ -98,3 +98,12 @@ JAVASCRIPT RELEASES
 - When shipping the final version of the product, Babel can be used to transpile the code basae to the ES5 standarts.
 
 JAVASCRIPT STRICT MODE
+- Strict mode allows us to write safer JS code and avoid some bad practices automatically. To activate it, simply add 'use strict' string at the very beggining of the code file. This mod should always be enabled.
+
+FUNCTIONS
+- Functions are a fundamental concept of JavaScript. In general, we use functions to repeat certain pieces of code multilie times. Function syntax is such: 'function name(parameter block) {declaration block}'.
+- To receive the end result of function working, we assign the function call to a variable.  This way, the returned value of the function will be the value of the variable, with which we can interract.
+- When function is made to make a singular calculation, we do not need to store the result of it in the separate vaiable, instead we can simply return the result of calculation.
+- There are two ways of declaring a function in JavaScript. We can use a function keyword with a name, which is function declaration or we can assign function body without a name to a variable and referr to that variable as if it was a function. This method is called function expresion.
+- The difference between these methods is that you can call the function declaration before you write it in the code, but you can't do that with a function expression.
+
