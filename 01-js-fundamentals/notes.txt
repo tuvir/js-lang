@@ -115,3 +115,12 @@ FUNCTIONS CALLING OTHER FUNCTIONS
 - We can call other functions inside the bodies of another to better decompose our code.
 - Parameters of different functions can have the same name, this woun't result in any conflict since function parameters can be treated as local variables.
 - Functions are expressions therefore to print the result of function working we can simply log the function with needed parameters with console.log. It's not always neccecary to store the returned value of a function in a separate variable.
+
+ARRAYS OVERVIEW
+- Arrays are a common data-structure that can be seen as a list of data pieces that we can access separatly. Each array starts from 0.
+- Arrays can be mutated if initialized with 'const', however they cannot be comletely changed, for this they should be initialized with 'let'.
+- Arrays can hold multiple types of values, like whole function calls and different types of data at the same time.
+- To interract with arrays, JavaScript has a lot of built in methods, for example, 'push' will add an element to the end and 'unshift' will add an element to the beggining of an array.
+- Methods are expressions therefore they produce a value, value of 'push' and 'unshift' will be the new lenghth of an array. We can log this value.
+- There are seweral methods to check wether the given element exists in array or not. 'includes' method gives boolean value wether given element is in the array or not. This method uses strict equality.
+- 'includes' method is often used in 'if' statements, since it produces booleans.

@@ -36,3 +36,11 @@ function describePopulation(country, population) {
     return `${country} has ${population} million people which is about ${percentageOfWorld}% of the world population!`;
 }
 console.log(describePopulation('Japan', 121));
+
+//ASSINGNMENT 5
+console.log(`\nASSIGNMENT 5`);
+const populations = [171, 223, 12, 82];
+console.log(populations.length === 4);
+const percentages = [percentageOfWorld1(populations[0]), percentageOfWorld1(populations[1]), percentageOfWorld1(populations[2]), percentageOfWorld1(populations[3])];
+console.log(percentages[0]);
+

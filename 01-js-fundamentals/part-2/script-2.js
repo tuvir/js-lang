@@ -27,7 +27,7 @@ const age3 = calcAge3(2002);
 
 console.log(age1, age2, age3);
 */
-
+/*
 function yearsUntilRetirement(birthYear, firstName) {
     const ageCurrent = calcAge(birthYear);
     const ageRetirement = 65 - ageCurrent;
@@ -46,3 +46,20 @@ console.log(yearsUntilRetirement(1981, 'Olga'));
 function calcAge(birthYear) {
     return 2022 - birthYear;
 }
+*/
+
+const friends = ['Danil', 'Nastya', 'Anton'];
+// Add elements
+const newLength = friends.push('Kristina');
+console.log(friends, newLength);
+const arrayStart = friends.unshift('Alla');
+console.log(friends, arrayStart);
+
+// Remove elements
+const popped = friends.pop();
+console.log(friends);
+const shifted = friends.shift();
+console.log(friends);
+
+// Check elements
+console.log(friends.includes('Danil'));
