@@ -108,8 +108,10 @@ FUNCTIONS
 - The difference between these methods is that you can call the function declaration before you write it in the code, but you can't do that with a function expression.
 
 ARROW FUNCTIONS
-- Third way to declare a function is so called 'arrow function'. It has a shortened syntax: functijon functionName = parameter => returned value (must be a single string). When arrow function only has one line of code the return value is calculated implicitely, meaning that we do not need to add return keyword. But if the calculation of returned value has multiple lines of code, we need to explicitely write return.
+- Third way to declare a function is so called 'arrow function'. It has a shortened syntax: const functionName = parameter => returned value (must be a single string). When arrow function only has one line of code the return value is calculated implicitely, meaning that we do not need to add return keyword. But if the calculation of returned value has multiple lines of code, we need to explicitely write return.
 - Arrow functions are good to write short one-line functions, but they are same as bsaic functions, when they have multiple lines of code.
 
 FUNCTIONS CALLING OTHER FUNCTIONS
 - We can call other functions inside the bodies of another to better decompose our code.
+- Parameters of different functions can have the same name, this woun't result in any conflict since function parameters can be treated as local variables.
+- Functions are expressions therefore to print the result of function working we can simply log the function with needed parameters with console.log. It's not always neccecary to store the returned value of a function in a separate variable.
