@@ -1,6 +1,6 @@
 // ASSINGNMENT 1
 console.log('ASSINGNMENT 1');
-const country = 'Russia';
+const country = 'Japan';
 const continent = 'Eurasia';
 let population = 117;
 

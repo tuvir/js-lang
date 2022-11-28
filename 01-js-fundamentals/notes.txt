@@ -107,3 +107,9 @@ FUNCTIONS
 - There are two ways of declaring a function in JavaScript. We can use a function keyword with a name, which is function declaration or we can assign function body without a name to a variable and referr to that variable as if it was a function. This method is called function expresion.
 - The difference between these methods is that you can call the function declaration before you write it in the code, but you can't do that with a function expression.
 
+ARROW FUNCTIONS
+- Third way to declare a function is so called 'arrow function'. It has a shortened syntax: functijon functionName = parameter => returned value (must be a single string). When arrow function only has one line of code the return value is calculated implicitely, meaning that we do not need to add return keyword. But if the calculation of returned value has multiple lines of code, we need to explicitely write return.
+- Arrow functions are good to write short one-line functions, but they are same as bsaic functions, when they have multiple lines of code.
+
+FUNCTIONS CALLING OTHER FUNCTIONS
+- We can call other functions inside the bodies of another to better decompose our code.
