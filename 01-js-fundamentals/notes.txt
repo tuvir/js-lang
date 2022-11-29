@@ -124,3 +124,15 @@ ARRAYS OVERVIEW
 - Methods are expressions therefore they produce a value, value of 'push' and 'unshift' will be the new lenghth of an array. We can log this value.
 - There are seweral methods to check wether the given element exists in array or not. 'includes' method gives boolean value wether given element is in the array or not. This method uses strict equality.
 - 'includes' method is often used in 'if' statements, since it produces booleans.
+
+INTRODUCTION TO OBJECTS
+- Objects are a data structure that is similar to arrays in a way that it also stores multiple data pieces, but objects have couple of key differences.
+- There are multiple ways of making an object in JavaScript, first is called 'literal' whnen we write the contents of an object ourselves.
+- Syntax of object-literal way: const objectName {propertyName: property, propertyName: property};.
+- The biggest difference between objects and arrays is that in arrays order of the data matters a lot, because we retreive the information from an array via element order number. But in object the order of the data doesn't matter. So in general, objects are used more for unstructured data and arrays are used for ordered data.
+
+GETTING DATA FROM AN OBJECT
+- There are two ways of taking data from an object: dot notation(object.propertyName) and bracket notation(object['propertyName']). 
+- Difference between theese methods is that we can isert any expression into the bracket method while in dotted method we can only state an existing property name.
+- Bracket method is very handy when we take property name as an iput from a user and store it in some variable. To access the property value of an object we use bracket notation where we state the variable name where property name is stored.
+- 'length' property can be used for counting the number of symbols in a string AND to count a number of entries in an array.

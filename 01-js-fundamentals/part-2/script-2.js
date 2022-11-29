@@ -47,7 +47,7 @@ function calcAge(birthYear) {
     return 2022 - birthYear;
 }
 */
-
+/*
 const friends = ['Danil', 'Nastya', 'Anton'];
 // Add elements
 const newLength = friends.push('Kristina');
@@ -63,3 +63,25 @@ console.log(friends);
 
 // Check elements
 console.log(friends.includes('Danil'));
+*/
+
+const person = {
+    firstName:'Petr',
+    lastName: 'Kulikov',
+    age: 18,
+    job: 'developer'
+}
+
+// Dot notation
+console.log(person.firstName);
+
+// Bracket notation
+const jobKey = 'ob';
+console.log(person['j' + jobKey]);
+
+// const intestedIn = prompt('Select one topic: firstName, lastName, job, age');
+// console.log(person[intestedIn]);
+
+person.friends = ['Danil', 'Nastya', 'Alla'];
+console.log(person);
+console.log(`${person.firstName} is ${person.age} and has ${person.friends.length} friends. His best friend's name is ${person.friends[0]}`)
