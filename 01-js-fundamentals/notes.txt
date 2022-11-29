@@ -141,3 +141,5 @@ OBJECT METHODS
 - Object method is a function that has been defined iside the object. The syntax of object method is similiar to function expression.
 - 'this' keyword is used to point at a certain object property. This is used in object methods to take some value directly from an object rather than passing this value externally.
 - 'this' keyword can also be used to create new properties.
+- If object method creates a property inside the object, to access this property we either need to call the method first, so the property is created and then interract with said property or we make the method return that property and call the method directly.
+- 
