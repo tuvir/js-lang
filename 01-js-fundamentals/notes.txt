@@ -142,4 +142,7 @@ OBJECT METHODS
 - 'this' keyword is used to point at a certain object property. This is used in object methods to take some value directly from an object rather than passing this value externally.
 - 'this' keyword can also be used to create new properties.
 - If object method creates a property inside the object, to access this property we either need to call the method first, so the property is created and then interract with said property or we make the method return that property and call the method directly.
-- 
+
+LOOPS. FOR LOOP
+- Loops are a special group of statements that are used to repeat a certain task for specific amount of iterations, which is defined by the condition.
+- Syntax of 'for' loop: for(let i = 1; i <= 10, i++) {}. While the condition of the loop is true, it will execute the operation in it's body. This loop can be used for going through arrays or printing multiple lines of text.

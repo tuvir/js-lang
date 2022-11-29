@@ -71,3 +71,10 @@ country.checkIsIsland = function() {
 }
 console.log(country.checkIsIsland());
 console.log(country);
+
+//ASSIGNMENT 9
+console.log(`\nASSIGNMENT 9`);
+for(let i = 1; i <= 50; i++) {
+    console.log(`Voter number ${i} is currently voting`);
+}
+

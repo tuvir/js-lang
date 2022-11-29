@@ -87,7 +87,7 @@ console.log(person['j' + jobKey]);
 console.log(person);
 console.log(`${person.firstName} is ${person.age} and has ${person.friends.length} friends. His best friend's name is ${person.friends[0]}`)
 */
-
+/*
 const person = {
     firstName:'Petr',
     lastName: 'Kulikov',
@@ -112,5 +112,11 @@ console.log(person.age);
 console.log(person.age);
 console.log(person.age);
 console.log(person.getSummary());
+*/
+
+for(let i = 1; i <= 10; i++ ) {
+    console.log(`I got ${i} friends`);
+}
+
 
 
