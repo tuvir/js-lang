@@ -136,3 +136,8 @@ GETTING DATA FROM AN OBJECT
 - Difference between theese methods is that we can isert any expression into the bracket method while in dotted method we can only state an existing property name.
 - Bracket method is very handy when we take property name as an iput from a user and store it in some variable. To access the property value of an object we use bracket notation where we state the variable name where property name is stored.
 - 'length' property can be used for counting the number of symbols in a string AND to count a number of entries in an array.
+
+OBJECT METHODS
+- Object method is a function that has been defined iside the object. The syntax of object method is similiar to function expression.
+- 'this' keyword is used to point at a certain object property. This is used in object methods to take some value directly from an object rather than passing this value externally.
+- 'this' keyword can also be used to create new properties.

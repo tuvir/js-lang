@@ -64,12 +64,14 @@ console.log(friends);
 // Check elements
 console.log(friends.includes('Danil'));
 */
-
+/*
 const person = {
     firstName:'Petr',
     lastName: 'Kulikov',
     age: 18,
-    job: 'developer'
+    job: 'developer',
+person.friends = ['Danil', 'Nastya', 'Alla'];
+
 }
 
 // Dot notation
@@ -82,6 +84,33 @@ console.log(person['j' + jobKey]);
 // const intestedIn = prompt('Select one topic: firstName, lastName, job, age');
 // console.log(person[intestedIn]);
 
-person.friends = ['Danil', 'Nastya', 'Alla'];
 console.log(person);
 console.log(`${person.firstName} is ${person.age} and has ${person.friends.length} friends. His best friend's name is ${person.friends[0]}`)
+*/
+
+const person = {
+    firstName:'Petr',
+    lastName: 'Kulikov',
+    birthYear: 2003,
+    job: 'developer',
+    friends: ['Danil', 'Nastya', 'Alla'],
+    hasDriversLicence: true,
+    // calcAge: function(birthYear) {
+    //     return 2022 - birthYear;
+    // }
+    calcAge: function() {
+        this.age = 2022 - this.birthYear;
+        return this.age;
+    },
+    getSummary: function() {
+        return `${this.firstName} is a ${this.calcAge()}-years old ${this.job}, and he ${this.hasDriversLicence ? 'has' : `doesn't have`} drivers licence`   
+    }
+};
+
+console.log(person.calcAge());
+console.log(person.age);
+console.log(person.age);
+console.log(person.age);
+console.log(person.getSummary());
+
+
