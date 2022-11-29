@@ -57,3 +57,17 @@ const country = {
 //ASSIGNMENT 7
 console.log(`\nASSIGNMENT 7`);
 console.log(`${country.country} has ${country.population} million ${country.language}-speaking, ${country.neighbours.length} neighbors and a capital called ${country.capital}`);
+
+//ASSIGNMENT 8
+console.log(`\nASSIGNMENT 8`);
+country.describe = function() {
+    return `${this.country} has ${this.population} million ${this.language}-speaking, ${this.neighbours.length} neighbors and a capital called ${this.capital}`;
+}
+console.log(country.describe());
+
+country.checkIsIsland = function() { 
+    this.isIsland = this.neighbours.length === 0 ? true : false;
+    return this.isIsland;
+}
+console.log(country.checkIsIsland());
+console.log(country);
