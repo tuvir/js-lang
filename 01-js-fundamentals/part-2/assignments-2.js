@@ -78,3 +78,15 @@ for(let i = 1; i <= 50; i++) {
     console.log(`Voter number ${i} is currently voting`);
 }
 
+//ASSIGNMENT 10
+console.log(`\nASSIGNMENT 10`);
+const percentages2 = [];
+const checkIfSame = [];
+for(let i = 0; i < populations.length; i++) {
+    percentages2.push(percentageOfWorld1(populations[i]));
+    if(percentages2[i] === percentages[i]) {
+        checkIfSame.push(Boolean(1));
+    }
+}
+console.log(percentages2);
+console.log(checkIfSame);
