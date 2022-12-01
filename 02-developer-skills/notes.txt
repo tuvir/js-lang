@@ -1,0 +1,2 @@
+VS CODE SETUP FOR WEB-DEV
+- To enable Prettier formatter go to settings-'Default formatter'-Prettier.
