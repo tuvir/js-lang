@@ -1,2 +1,16 @@
 VS CODE SETUP FOR WEB-DEV
 - To enable Prettier formatter go to settings-'Default formatter'-Prettier.
+- To enable live-server terminal command istall npm then run sudo npm install live-server -g
+
+PROBLEM SOLVING
+- First, ask clarifying questions, to narrow down the scope of the problem.
+- Divide the whole task into small problems. The least complicated each small problems are, the easier is to take them on.
+- Research the problem. Good sites for information are MDN and Official Javascript documentation.
+- For bigger problems you can write some pseudo code before the actual code.
+
+PROCESS OF DEBUGGING
+- Step 1: identify the bug. During development, software testing or production users report.
+- Step 2: find the bug in the code.
+- Step 3: fix the bug.
+- Step 4: prevent similiar bugs from happening, by reviewing the codebase.
+- There is an imbedded tool for debugging in the devtools, in sources tab.
