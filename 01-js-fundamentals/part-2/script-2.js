@@ -118,5 +118,24 @@ for(let i = 1; i <= 10; i++ ) {
     console.log(`I got ${i} friends`);
 }
 
+const person = [
+    'Petr',
+    'Kulikov',
+    18,
+    'developer',
+    true,
+    [1, 2, 3],
+]
+const types = [];
+for(let i = 0; i < person.length; i++) {
+    console.log(person[i]);
+    types[i] = typeof person[i];
+}
+console.log(types);
 
+const years = [2003, 1981, 1999, 2012];
+const ages = [];
 
+for(let i = 0; i < years.length; i++) {
+    ages.push(2022 - years[i]);
+}
