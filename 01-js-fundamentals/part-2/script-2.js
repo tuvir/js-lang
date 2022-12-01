@@ -113,7 +113,7 @@ console.log(person.age);
 console.log(person.age);
 console.log(person.getSummary());
 */
-
+/*
 for(let i = 1; i <= 10; i++ ) {
     console.log(`I got ${i} friends`);
 }
@@ -139,3 +139,28 @@ const ages = [];
 for(let i = 0; i < years.length; i++) {
     ages.push(2022 - years[i]);
 }
+*/
+/*
+const person = [
+    'Petr',
+    'Kulikov',
+    18,
+    'developer',
+    true,
+    [1, 2, 3],
+];
+
+// Reading through array backwards
+for(let i = person.length - 1; i >= 0; i--) {
+    console.log(person[i]);
+}
+*/
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+const diceRolls = [];
+while(dice != 6) {
+    diceRolls.push(dice);
+    dice = Math.trunc(Math.random() * 6) + 1;
+}
+console.log(diceRolls);
+console.log(dice);

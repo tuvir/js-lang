@@ -90,3 +90,24 @@ for(let i = 0; i < populations.length; i++) {
 }
 console.log(percentages2);
 console.log(checkIfSame);
+
+//ASSIGNMENT 11
+console.log(`\nASSIGNMENT 11`);
+const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']];
+for(let i = 0; i < listOfNeighbours.length; i++) {
+    for(let j = 0; j < listOfNeighbours[i].length; j++) {
+        if(listOfNeighbours[i].length > 1) {
+            console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
+        }
+    }
+}
+
+//ASSIGNMENT 12
+console.log(`\nASSIGNMENT 12`);
+const percentages3 = [];
+let i = 0;
+while(i < populations.length) {
+    percentages3.push(percentageOfWorld1(populations[i]));
+    i++;
+}
+console.log(percentages3);

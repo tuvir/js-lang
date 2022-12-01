@@ -148,6 +148,13 @@ LOOPS. FOR LOOP
 - Syntax of 'for' loop: for(let i = 1; i <= 10, i++) {}. While the condition of the loop is true, it will execute the operation in it's body. This loop can be used for going through arrays or printing multiple lines of text.
 - We can also fill the arrays with data by using for loop. We can either assign the the value of current index to the needed array or we can use 'push()' function.
 - To make a condition to loop through array that won't be hardcoded we use array.legth property.
+- To loop through array backwards we set the iterator to arrray.length - 1 and substract it until it is lesser than 0.
+- We can make a loop inisde loop to get meltiple iterations of inner loop within one iteration of outer loop. This is useful when looping through the array of arrays.
 
 LOOPS. BREAK AND CONTINUE
-'break' and 'continue' are two loop operating keywords. 'continue' skips the curent iteration of a loop and starts next one. Can be used to conditionally skip some iterations. 'break' immediately exits the loop on a current iteration. This is used to terminate loops at the specific point.
+- 'break' and 'continue' are two loop operating keywords. 'continue' skips the curent iteration of a loop and starts next one. Can be used to conditionally skip some iterations. 'break' immediately exits the loop on a current iteration. This is used to terminate loops at the specific point. 
+
+LOOPS. WHILE LOOP
+- Second type of loop is 'while' loop, which needs to have a condition and while this condition is true, the loop runs.
+- 'while' loop is more versatile than 'for' loop because it only needs condition. This loop can be used in cases when the counter isn't present.
+- When making an array inside loop from the newmade data we simply use '.push' method without the inclusion of iterator.
