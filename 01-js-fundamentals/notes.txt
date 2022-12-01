@@ -22,7 +22,7 @@ DATA TYPES
 - Null. Means 'empty value'.
 - Symbol (ES2015) - unique value that can't be changed.
 - Bigint (ES2020) - Stores larger numbers than Number type can hold.
-- JavaScript has dynamic typing, which means that you don't need to manually define the data type of a value which variable will store. Instead thge type is determined automatically.
+- JavaScript has dynamic typing, which means that you don't need to manually define the data type of a value which variable will store. Instead the type is determined automatically.
 - In JavaScript VALUES have the type, not VARIABLES.
 - 'typeof' operator can be used to print the type value of a variable or just value as a string.
 - To change the value of a variable, we simply assing it to the variable. We do not need to use 'let' keyword again.
@@ -49,13 +49,13 @@ STRINGS AND TEMPLATE LITERALS
 - Second method of forming strings is called template literals, which allows us to write a string in a normal way and then inserting the variables inside of it.
 - To make a template literal we enclose the string in backticks. It's syntax is such: `text ${variable}`;.
 - We can write text-only strings using backticks, instead of quotes. This is useful, since if we need to add variables or quotes inside the string we do not need to add or change quotes.
-- To make multilie strings backticks are better, since you don't need to include '\n' escpae sequence rather than just pressing Enter.
+- To make multiline strings backticks are better, since you don't need to include '\n' escape sequence rather than just pressing Enter.
 
 DECISION MAKING
 - String literals are supreme!
 
 TYPE CONVERSION AND COERCION
-- Since JavaScript is dynamically typed language, we can and often should manipulate the data types of different values to make the program work as expected. This is called 'type conversion' and usually is done manually. For example, if user types the age of his birth, the value is set as a string. So for us to make mathematical operations with it, we need to first conver string to a number.
+- Since JavaScript is dynamically typed language, we can and often should manipulate the data types of different values to make the program work as expected. This is called 'type conversion' and usually is done manually. For example, if user types the age of his birth, the value is set as a string. So for us to make mathematical operations with it, we need to first convert string to a number.
 - In this case, we can use 'Number()' function.
 - NaN (stands for 'Not a number') is a special number, that is produced when operation with numbers couldn't produce another number.
 - To convert number into string we use 'String()' function. Function names always start from capital letter.
@@ -87,15 +87,15 @@ SWITCH CASES
 - Switch case does strict comparison, so it will not work desirably if input data is somewhat incorrect.
 
 STATEMENTS AND EXPRESSIONS, TERNARY OPERATOR
-- Expression always produces a value, statement doesn't produce a vale.
-- In some code constructions JavaScript only expects an expression not a statement to be placed. For example, in template literals we cna only place expressions, not statements.
+- Expression always produces a value, statement doesn't produce a value.
+- In some code constructions JavaScript only expects an expression not a statement to be placed. For example, in template literals we can only place expressions, not statements.
 - Ternary operator can be used istead single if\else block.
 - Since it's an operator, it will produce a value, thus we can use ternary operator to assign one of two values to one variable.
 - Ternary operator can be inserted right into template literal.
 
 JAVASCRIPT RELEASES
 - When developing a javascript project, use a latest  version chrome browser to access latest javascript features.
-- When shipping the final version of the product, Babel can be used to transpile the code basae to the ES5 standarts.
+- When shipping the final version of the product, Babel can be used to transpile the code base to the ES5 standarts.
 
 JAVASCRIPT STRICT MODE
 - Strict mode allows us to write safer JS code and avoid some bad practices automatically. To activate it, simply add 'use strict' string at the very beggining of the code file. This mod should always be enabled.
@@ -118,7 +118,7 @@ FUNCTIONS CALLING OTHER FUNCTIONS
 
 ARRAYS OVERVIEW
 - Arrays are a common data-structure that can be seen as a list of data pieces that we can access separatly. Each array starts from 0.
-- Arrays can be mutated if initialized with 'const', however they cannot be comletely changed, for this they should be initialized with 'let'.
+- Arrays can be mutated if initialized with 'const', however they cannot be completely changed, for this they should be initialized with 'let'.
 - Arrays can hold multiple types of values, like whole function calls and different types of data at the same time.
 - To interract with arrays, JavaScript has a lot of built in methods, for example, 'push' will add an element to the end and 'unshift' will add an element to the beggining of an array.
 - Methods are expressions therefore they produce a value, value of 'push' and 'unshift' will be the new lenghth of an array. We can log this value.
