@@ -71,3 +71,26 @@ if(bmiJohn.valueBMI > bmiMark.valueBMI) {
 } else {
     console.log(`${bmiMark.fullName} BMI (${bmiMark.valueBMI}) is higher than ${bmiJohn.fullName} (${bmiJohn.valueBMI})`);
 }
+
+//CHALLENGE 4
+console.log(`\nCHALLENGE 4`);
+const billsNew = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tipsNew = [];
+const totalsNew = [];
+for(let i = 0; i < billsNew.length; i++) {
+    tipsNew.push(calcTip(billsNew[i]));
+    totalsNew.push(tipsNew[i] + billsNew[i]);
+}
+console.log(billsNew);
+console.log(tipsNew);
+console.log(totalsNew);
+console.log(calcAverageNew(totalsNew));
+
+function calcAverageNew(arr) {
+    let totalsSum = 0;
+    for(let i = 0; i < arr.length; i++) {
+        totalsSum += arr[i];
+    }
+    console.log(totalsSum);
+    return totalsSum / arr.length;
+}
