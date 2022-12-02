@@ -14,3 +14,6 @@ PROCESS OF DEBUGGING
 - Step 3: fix the bug.
 - Step 4: prevent similiar bugs from happening, by reviewing the codebase.
 - There is an imbedded tool for debugging in the devtools, in sources tab.
+
+CODING CHALLENGE
+- WHen forming string through 'for' loop intialize firs outside the loop as an empty string('') and then each loop iteration add a formed string to it with '+=';
