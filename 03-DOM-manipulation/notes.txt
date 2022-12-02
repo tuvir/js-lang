@@ -1,7 +1,11 @@
 DOM MANIPULATION OVERVIEW
-- To select an HTML element in JavaScript file we use 
-'document.querySelector()' method in which we pass a class or element name to get access to. Then we can extract the content of an element via different methods, for example, '.textContent' will give us text of the element.
 - DOM (stands for document object model) can be described as a connection between JS and HTML/CSS. It's a structured representation of HTML documents, which allows us to access HTML/CSS elements and styles to manipulate them with JS code.
 - DOM should be seen as a tree where each HTML element is a node, that are interlinked with it's parent element. The first element of the DOM tree is 'Document' which JS has access to.
 - HTML element itself and its content are both separate nodes of the DOM tree. The element is a parent and it's content is a child.
 - DOM methods and properties are NOT a part of JS. DOM is a so called web API (stands for application programming interface) which browsers include on their own.
+
+SELECTING AND MANIPULATING ELEMENTS
+- To select an HTML element in JavaScript file we use 
+'document.querySelector()' method in which we pass a class or element name to get access to. Then we can extract the content of an element via different methods, for example, '.textContent' will give us text of the element.
+- After selecting the element with 'querySelector' and using submethod to access it's property, we can then change it's value.
+- I general JS programming is selecing an element, and assigning a new value to it when the certain condition is met.
