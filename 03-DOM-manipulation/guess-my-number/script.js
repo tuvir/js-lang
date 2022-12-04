@@ -6,22 +6,30 @@ document.querySelector('.number').textContent = 13;
 document.querySelector('.score').textContent = 18;
 document.querySelector('.highscore').textContent = 11;
 */
-const rightAnswer = Math.floor(Math.random() * (20 - 2) + 1);
+const rightAnswer = Math.trunc(Math.random() * 20) + 1;
 const message = document.querySelector('.message');
-const score = document.querySelector('.score');
-const highScore = document.querySelector('.highscore');
+let score = 20;
+let highScore = 0;
 const displayAnswer = document.querySelector('.number');
-console.log(displayAnswer.textContent);
+
 function checkGuess() {
   const guess = Number(document.querySelector('.guess').value);
-  if (!guess) {
-    message.textContent = 'Enter a number';
+  if (!guess || guess < 0) {
+    message.textContent = 'Enter a number > 0';
   } else if (guess > rightAnswer) {
-    message.textContent = 'Too hot';
     countScore();
+    if (score > 0) {
+      message.textContent = 'Too hot';
+    } else {
+      message.textContent = 'You lose!';
+    }
   } else if (guess < rightAnswer) {
-    message.textContent = 'Too cold';
     countScore();
+    if (score > 0) {
+      message.textContent = 'Too cold';
+    } else {
+      message.textContent = 'You lose!';
+    }
   } else if (guess === rightAnswer) {
     message.textContent = 'Right answer!';
     countHighScore();
@@ -30,14 +38,15 @@ function checkGuess() {
 }
 
 function countScore() {
-  if (Number(score.textContent) > 0) {
-    score.textContent -= 1;
+  if (score > 0) {
+    score--;
+    document.querySelector('.score').textContent = score;
   }
 }
 
 function countHighScore() {
-  if (Number(score.textContent) > Number(highScore.textContent)) {
-    highScore.textContent = score.textContent;
+  if (score > highScore) {
+    document.querySelector('.highscore').textContent = score;
   }
 }
 

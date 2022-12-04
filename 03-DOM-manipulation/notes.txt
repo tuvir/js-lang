@@ -17,3 +17,6 @@ HANDLING CLICK EVENTS
 - The function that event listener will use can be defined both inside the event listener arguments parentheses, or otside it. In second case you give its name as an argument, WITHOUT the ending parentheses.
 - You can make each '.querySelector' ito a variable, to avoid writing the same code multiple times.
 - When having an event that sould change multiple values of different HTML elements, make event listener function that will call other functions within itself.
+
+IMPLEMENTING GAME LOGIC
+- It's always better to store a value (f.e, score) in a variable (thеsе variables are called 'state variables')inside the JS script and then displaying it, rather than taking the value from the DOM, changing it in the script and then displaying it again.
