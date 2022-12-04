@@ -20,3 +20,7 @@ HANDLING CLICK EVENTS
 
 IMPLEMENTING GAME LOGIC
 - It's always better to store a value (f.e, score) in a variable (thеsе variables are called 'state variables')inside the JS script and then displaying it, rather than taking the value from the DOM, changing it in the script and then displaying it again.
+
+MANIPULATING CSS STYLES
+- To change the CSS styles via JS we simply add '.styles' to selected HTML element and the select the style we need. Example: 'document.querySelector('body').style.backgroundColor = '#fff'.
+- When writing style names in CSS we write them in lower camel case instead od kebab case.

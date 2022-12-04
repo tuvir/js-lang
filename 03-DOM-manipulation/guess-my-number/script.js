@@ -17,23 +17,31 @@ function checkGuess() {
   if (!guess || guess < 0) {
     message.textContent = 'Enter a number > 0';
   } else if (guess > rightAnswer) {
-    countScore();
-    if (score > 0) {
-      message.textContent = 'Too hot';
-    } else {
-      message.textContent = 'You lose!';
-    }
+    displayHigher();
   } else if (guess < rightAnswer) {
-    countScore();
-    if (score > 0) {
-      message.textContent = 'Too cold';
-    } else {
-      message.textContent = 'You lose!';
-    }
+    displayLower();
   } else if (guess === rightAnswer) {
     message.textContent = 'Right answer!';
     countHighScore();
     displayRightAnswer();
+  }
+}
+
+function displayLower() {
+  countScore();
+  if (score > 0) {
+    message.textContent = 'Too low';
+  } else {
+    message.textContent = 'You lose!';
+  }
+}
+
+function displayHigher() {
+  countScore();
+  if (score > 0) {
+    message.textContent = 'Too high';
+  } else {
+    message.textContent = 'You lose!';
   }
 }
 
@@ -52,6 +60,7 @@ function countHighScore() {
 
 function displayRightAnswer() {
   displayAnswer.textContent = rightAnswer;
+  document.querySelector('body').style.backgroundColor = '#60b347';
 }
 
 document.querySelector('.check').addEventListener('click', checkGuess);
