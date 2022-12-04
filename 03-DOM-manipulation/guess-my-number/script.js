@@ -1,11 +1,5 @@
 'use strict';
-/*
-console.log(document.querySelector('.message').textContent);
-document.querySelector('.message').textContent = 'Congratulations!';
-document.querySelector('.number').textContent = 13;
-document.querySelector('.score').textContent = 18;
-document.querySelector('.highscore').textContent = 11;
-*/
+
 const message = document.querySelector('.message');
 const displayAnswer = document.querySelector('.number');
 const loseMessage = 'You lose!';
@@ -14,35 +8,23 @@ let rightAnswer = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highScore = 0;
 
+document.querySelector('.check').addEventListener('click', checkGuess);
+document.querySelector('.again').addEventListener('click', restartGame);
+
 function checkGuess() {
   const guess = Number(document.querySelector('.guess').value);
   if (!guess || guess < 0) {
     message.textContent = 'Enter a number > 0';
-  } else if (guess > rightAnswer) {
-    displayHigher();
-  } else if (guess < rightAnswer) {
-    displayLower();
+  } else if (guess !== rightAnswer) {
+    countScore();
+    if (score > 0) {
+      message.textContent = guess > rightAnswer ? 'Too high' : 'Too low';
+    } else {
+      message.textContent = loseMessage;
+    }
   } else if (guess === rightAnswer) {
     countHighScore();
     displayRightAnswer();
-  }
-}
-
-function displayLower() {
-  countScore();
-  if (score > 0) {
-    message.textContent = 'Too low';
-  } else {
-    message.textContent = loseMessage;
-  }
-}
-
-function displayHigher() {
-  countScore();
-  if (score > 0) {
-    message.textContent = 'Too high';
-  } else {
-    message.textContent = loseMessage;
   }
 }
 
@@ -77,6 +59,3 @@ function restartGame() {
   message.textContent = 'Start guessing...';
   document.querySelector('.guess').value = '';
 }
-
-document.querySelector('.check').addEventListener('click', checkGuess);
-document.querySelector('.again').addEventListener('click', restartGame);
