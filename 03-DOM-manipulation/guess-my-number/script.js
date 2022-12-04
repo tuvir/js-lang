@@ -6,7 +6,8 @@ document.querySelector('.number').textContent = 13;
 document.querySelector('.score').textContent = 18;
 document.querySelector('.highscore').textContent = 11;
 */
-const rightAnswer = Math.trunc(Math.random() * 20) + 1;
+let rightAnswer = Math.trunc(Math.random() * 20) + 1;
+console.log(rightAnswer);
 const message = document.querySelector('.message');
 let score = 20;
 let highScore = 0;
@@ -21,7 +22,6 @@ function checkGuess() {
   } else if (guess < rightAnswer) {
     displayLower();
   } else if (guess === rightAnswer) {
-    message.textContent = 'Right answer!';
     countHighScore();
     displayRightAnswer();
   }
@@ -54,13 +54,28 @@ function countScore() {
 
 function countHighScore() {
   if (score > highScore) {
-    document.querySelector('.highscore').textContent = score;
+    highScore = score;
+    document.querySelector('.highscore').textContent = highScore;
   }
 }
 
 function displayRightAnswer() {
   displayAnswer.textContent = rightAnswer;
+  message.textContent = 'Right answer!';
   document.querySelector('body').style.backgroundColor = '#60b347';
+  document.querySelector('.number').style.width = '30rem';
+}
+
+function restartGame() {
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
+  displayAnswer.textContent = '?';
+  score = 20;
+  document.querySelector('.score').textContent = score;
+  rightAnswer = Math.trunc(Math.random() * 20) + 1;
+  message.textContent = 'Start guessing...';
+  document.querySelector('.guess').value = '';
 }
 
 document.querySelector('.check').addEventListener('click', checkGuess);
+document.querySelector('.again').addEventListener('click', restartGame);

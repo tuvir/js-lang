@@ -24,3 +24,6 @@ IMPLEMENTING GAME LOGIC
 MANIPULATING CSS STYLES
 - To change the CSS styles via JS we simply add '.styles' to selected HTML element and the select the style we need. Example: 'document.querySelector('body').style.backgroundColor = '#fff'.
 - When writing style names in CSS we write them in lower camel case instead od kebab case.
+- When changing CSS with DOM we do not change the actual CSS file? inside these styles are set as inline styles.
+- When writing the new value of a CSS property we pass it as a string and the string must contain both value and a unit.
+- When working with input fields to change the text inside them we use 'value' submethod instead of 'textContent'
