@@ -1,0 +1,7 @@
+LIST OF FUNCTIONS I NEED
+- Function to get a right answer - a random iteger between 1 and 20.
+- Function that will trigger onclick the 'Check' button and takes the anwer as an argument. Function will evaluate the guess to the right answer and will change the text to either 'Too cold' or 'Too hot' or 'Right answer!'. +++
+- Function that will count the score of the player by substracting 1 from 20 each time he fails to guess the number. +++
+- Function that will store the highscore and change it if player gets the higher highscore. ???
+- Function that will restart the game on-click 'Again' button. It will turn the previous number into '?' and 'Right number' into 'Start guessing'. ---
+- Function tha will display the right answer instead of '?'. +++
