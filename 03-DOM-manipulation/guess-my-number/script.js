@@ -6,12 +6,13 @@ document.querySelector('.number').textContent = 13;
 document.querySelector('.score').textContent = 18;
 document.querySelector('.highscore').textContent = 11;
 */
-let rightAnswer = Math.trunc(Math.random() * 20) + 1;
-console.log(rightAnswer);
 const message = document.querySelector('.message');
+const displayAnswer = document.querySelector('.number');
+const loseMessage = 'You lose!';
+
+let rightAnswer = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highScore = 0;
-const displayAnswer = document.querySelector('.number');
 
 function checkGuess() {
   const guess = Number(document.querySelector('.guess').value);
@@ -32,7 +33,7 @@ function displayLower() {
   if (score > 0) {
     message.textContent = 'Too low';
   } else {
-    message.textContent = 'You lose!';
+    message.textContent = loseMessage;
   }
 }
 
@@ -41,7 +42,7 @@ function displayHigher() {
   if (score > 0) {
     message.textContent = 'Too high';
   } else {
-    message.textContent = 'You lose!';
+    message.textContent = loseMessage;
   }
 }
 
