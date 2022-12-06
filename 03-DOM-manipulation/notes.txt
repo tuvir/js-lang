@@ -14,9 +14,9 @@ HANDLING CLICK EVENTS
 - Event is a user activity on the web-page. Then can be a press of a specific button on the page or scroll of the mouse ring. Most of the events have unique names.
 - Event listener is a method that we can assign to the selected HTML element where the event will occur. When event listener triggers on specified event it will somehow change the current element or any other elements of the page.
 - Event listener accepts the event name as a string as first argument, then it takes the function that will trigger when the event is happend.
-- The function that event listener will use can be defined both inside the event listener arguments parentheses, or otside it. In second case you give its name as an argument, WITHOUT the ending parentheses.
-- You can make each '.querySelector' ito a variable, to avoid writing the same code multiple times.
-- When having an event that sould change multiple values of different HTML elements, make event listener function that will call other functions within itself.
+- The function that event listener will use can be defined both inside the event listener arguments parenthesis, or otside it. In second case you give its name as an argument, WITHOUT the ending parentheses.
+- You can make each '.querySelector' into a variable, to avoid writing the same code multiple times.
+- When having an event that should change multiple values of different HTML elements, make event listener function that will call other functions within itself.
 
 IMPLEMENTING GAME LOGIC
 - It's always better to store a value (f.e, score) in a variable (thеsе variables are called 'state variables')inside the JS script and then displaying it, rather than taking the value from the DOM, changing it in the script and then displaying it again.
@@ -30,3 +30,9 @@ MANIPULATING CSS STYLES
 
 CODE REFACTORING
 - When making a first version of a program it's ok to make dirty code, but you should always refactor it in the end, by placing duplicates of code in variables.
+
+TOGGLING CLASSES WITH JS
+- Common practice in web-development is to assign different classes to HTML elements where each class is responsible for a certain state of the element. These classes are then changed with JS, for example, with eventLiteners.
+- Example: we can hace a button that on click will open a  window. So we add two classes to this window, default onr that will make the window hidden and secondary, that will make it appear. We then assign the toggle of this class to the event listener, that will trigger when the button is clicked.
+- When using 'querySelector' to a class that is called on multiple elements, for example, a list of buttons, the method will by default choose only the first element where class name appears.
+- To choose all elements with same class name we use 'document.querySelectorAll('.class-name')' method. This method forms a node-list (array-like structure) of all the elements. We can store this node-list in a variable and, for example, walk through it with a loop.
