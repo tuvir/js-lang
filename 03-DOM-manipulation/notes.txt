@@ -31,8 +31,15 @@ MANIPULATING CSS STYLES
 CODE REFACTORING
 - When making a first version of a program it's ok to make dirty code, but you should always refactor it in the end, by placing duplicates of code in variables.
 
-TOGGLING CLASSES WITH JS
+SELECTING MULTIPLE HTML ELEMENTS
+- When using 'querySelector' to a class that is called on multiple elements, for example, multiple buttons, the method will by default choose only the first element where class name appears.
+- To choose all elements with same class name we use 'document.querySelectorAll('.class-name')' method. This method forms a node-list (array-like structure) of all the elements. We can store this node-list in a variable to get access to all of hte buttons at the same time. Inside this loop we can add event liteners that will fo something after we click on each button.
+
+MANIPULATING CLASSES WITH JS
 - Common practice in web-development is to assign different classes to HTML elements where each class is responsible for a certain state of the element. These classes are then changed with JS, for example, with eventLiteners.
-- Example: we can hace a button that on click will open a  window. So we add two classes to this window, default onr that will make the window hidden and secondary, that will make it appear. We then assign the toggle of this class to the event listener, that will trigger when the button is clicked.
-- When using 'querySelector' to a class that is called on multiple elements, for example, a list of buttons, the method will by default choose only the first element where class name appears.
-- To choose all elements with same class name we use 'document.querySelectorAll('.class-name')' method. This method forms a node-list (array-like structure) of all the elements. We can store this node-list in a variable and, for example, walk through it with a loop.
+- Example: we can make a button that on click will open a  window. So we add two classes to this window, default one that will make the window hidden and secondary, that will make it appear. We then assign the toggle of the hidden class to the event listener, that will trigger when the button is clicked.
+- The HTML elements that are chosen by 'document.querySelectorAll('')' method should do the same thing. If their purposes are different from one another, we should give them different calss names and work with each one at a time.
+- To change the class of selected HTML element we use 'classList' property with desired method that will change the class. Example: element.classList.remove('hidden').
+- When typing class name after the method we DO NOT add a dot at the beginig of the class name.
+- In general when we need to change the appearance of the page we give certain styles to a class and assign this class to desired element. Then we add or remove this class with event handlers to activate or deactivate specific styles.
+- When we have multiple event handlers which are doing the same thing, we call the same named function inside of them.
