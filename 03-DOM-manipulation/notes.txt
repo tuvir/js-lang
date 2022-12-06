@@ -43,3 +43,9 @@ MANIPULATING CLASSES WITH JS
 - When typing class name after the method we DO NOT add a dot at the beginig of the class name.
 - In general when we need to change the appearance of the page we give certain styles to a class and assign this class to desired element. Then we add or remove this class with event handlers to activate or deactivate specific styles.
 - When we have multiple event handlers which are doing the same thing, we call the same named function inside of them.
+
+HANDLING GLOBAL EVENTS
+- There are multiple categories of global events. Keyboard events is one of them. To handle global events we use 'addEventListener()' method on a 'document' element (like listening to the whole page).
+- There is 3 keyboard events: 'keydown' - single press on the key; 'keyup' - when we stop pressing the key; 'keypress' - when we press and hold the key, this event is triggered continously.
+- When eny event on a page happens JS creates an object, that stores the information about this event. We can access this object to check, if the happened evend is which we need. This is useful when we work with global events.
+- To look at the event object we need to give a parameter to the event listener function. Syntax: document.addEventListener('keydown', function (e){function body}). This way, when JS will execute this function it will give it the event object as a parameter.
