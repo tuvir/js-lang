@@ -49,3 +49,6 @@ HANDLING GLOBAL EVENTS
 - There is 3 keyboard events: 'keydown' - single press on the key; 'keyup' - when we stop pressing the key; 'keypress' - when we press and hold the key, this event is triggered continously.
 - When eny event on a page happens JS creates an object, that stores the information about this event. We can access this object to check, if the happened evend is which we need. This is useful when we work with global events.
 - To look at the event object we need to give a parameter to the event listener function. Syntax: document.addEventListener('keydown', function (e){function body}). This way, when JS will execute this function it will give it the event object as a parameter.
+
+PIG GAME PROJECT
+- When adding multiple elements of the same nature, for example, 2 score elements, we can give them same class-name, to style them alike, but to interract with them via JS as diffent elements we give them unique id's, by which we select them with 'document.querySelector('')'.
