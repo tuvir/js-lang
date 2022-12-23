@@ -7,6 +7,10 @@ let player1CurrentScore = 0;
 
 let activePlayer = 0;
 let currentScore = 0;
+
+// Array which stores total scores of each players
+const totalScoresArr = [0, 0];
+
 // Variables of score and dice elements
 const player0TotalScoreEl = document.querySelector('#score--0');
 const player1TotalScoreEl = document.querySelector('#score--1');
@@ -30,9 +34,12 @@ function rollDice() {
   displayDice(diceRoll);
   if (diceRoll !== 1) {
     currentScore += diceRoll;
-    currentScoreEl.textContent = currentScore;
-    // CHANGE LATER
+    document.querySelector(`#current--${activePlayer}`).textContent =
+      currentScore;
   } else {
+    document.querySelector(`#current--${activePlayer}`).textContent = 0;
+    activePlayer = activePlayer === 0 ? 1 : 0;
+    currentScore = 0;
   }
 }
 
