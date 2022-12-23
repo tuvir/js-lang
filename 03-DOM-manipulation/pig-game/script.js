@@ -11,7 +11,11 @@ let currentScore = 0;
 // Array which stores total scores of each players
 const totalScoresArr = [0, 0];
 
+// Variable which determines the winning total score
 const scoreToWin = 10;
+
+// State variable that check if game is finishe or not
+let gamePlaying = true;
 
 // Variables of score and dice elements
 const player0TotalScoreEl = document.querySelector('#score--0');
@@ -36,14 +40,16 @@ rollBtn.addEventListener('click', rollDice);
 holdBtn.addEventListener('click', holdScore);
 
 function rollDice() {
-  const diceRoll = Math.trunc(Math.random() * 6) + 1;
-  displayDice(diceRoll);
-  if (diceRoll !== 1) {
-    currentScore += diceRoll;
-    document.querySelector(`#current--${activePlayer}`).textContent =
-      currentScore;
-  } else {
-    switchPlayer();
+  if (gamePlaying) {
+    const diceRoll = Math.trunc(Math.random() * 6) + 1;
+    displayDice(diceRoll);
+    if (diceRoll !== 1) {
+      currentScore += diceRoll;
+      document.querySelector(`#current--${activePlayer}`).textContent =
+        currentScore;
+    } else {
+      switchPlayer();
+    }
   }
 }
 
@@ -63,23 +69,26 @@ function switchPlayer() {
 }
 
 function holdScore() {
-  totalScoresArr[activePlayer] += currentScore;
-  document.querySelector(`#score--${activePlayer}`).textContent =
-    totalScoresArr[activePlayer];
-  if (totalScoresArr[activePlayer] >= scoreToWin) {
-    finishGame();
-  } else {
-    switchPlayer();
+  if (gamePlaying) {
+    totalScoresArr[activePlayer] += currentScore;
+    document.querySelector(`#score--${activePlayer}`).textContent =
+      totalScoresArr[activePlayer];
+    if (totalScoresArr[activePlayer] >= scoreToWin) {
+      finishGame();
+    } else {
+      switchPlayer();
+    }
   }
 }
 
 function finishGame() {
+  gamePlaying = false;
   document
     .querySelector(`.player--${activePlayer}`)
     .classList.add('player--winner');
   document
     .querySelector(`.player--${activePlayer}`)
     .classList.remove('player--active');
-  rollBtn.removeEventListener('click', rollDice);
-  holdBtn.removeEventListener('click', holdScore);
+  // rollBtn.removeEventListener('click', rollDice);
+  // holdBtn.removeEventListener('click', holdScore);
 }
