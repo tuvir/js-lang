@@ -23,13 +23,13 @@ IMPLEMENTING GAME LOGIC
 
 MANIPULATING CSS STYLES
 - To change the CSS styles via JS we simply add '.styles' to selected HTML element and the select the style we need. Example: 'document.querySelector('body').style.backgroundColor = '#fff'.
-- When writing style names in CSS we write them in lower camel case instead od kebab case.
+- When writing style names in CSS we write them in lower camel case instead of kebab case.
 - When changing CSS with DOM we do not change the actual CSS file? inside these styles are set as inline styles.
 - When writing the new value of a CSS property we pass it as a string and the string must contain both value and a unit.
 - When working with input fields to change the text inside them we use 'value' submethod instead of 'textContent'
 
 CODE REFACTORING
-- When making a first version of a program it's ok to make dirty code, but you should always refactor it in the end, by placing duplicates of code in variables.
+- When making a first version of a program it's kinda ok to make dirty code, but you should always refactor it throughout the development, by placing duplicates of code in variables etc.
 
 SELECTING MULTIPLE HTML ELEMENTS
 - When using 'querySelector' to a class that is called on multiple elements, for example, multiple buttons, the method will by default choose only the first element where class name appears.
@@ -49,6 +49,7 @@ HANDLING GLOBAL EVENTS
 - There is 3 keyboard events: 'keydown' - single press on the key; 'keyup' - when we stop pressing the key; 'keypress' - when we press and hold the key, this event is triggered continously.
 - When eny event on a page happens JS creates an object, that stores the information about this event. We can access this object to check, if the happened evend is which we need. This is useful when we work with global events.
 - To look at the event object we need to give a parameter to the event listener function. Syntax: document.addEventListener('keydown', function (e){function body}). This way, when JS will execute this function it will give it the event object as a parameter.
+- When we using a named function in an event listener, this function receives an 'event' object. We can declare the function so it will take this event as an argument and inside the function we can take properties values of this object and wok with them.
 
 PIG GAME PROJECT
 - When adding multiple elements of the same nature, for example, 2 score elements, we can give them same class-name, to style them alike, but to interract with them via JS as diffent elements we give them unique id's, by which we select them with 'document.querySelector('')'.

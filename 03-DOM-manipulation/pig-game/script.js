@@ -12,22 +12,25 @@ const player0TotalScoreEl = document.querySelector('#score--0');
 const player1TotalScoreEl = document.querySelector('#score--1');
 const player0CurrentScoreEl = document.querySelector('#current--0');
 const player1CurrentScoreEl = document.querySelector('#current--1');
+const currentScoreEl = document.querySelector(`#current--${activePlayer}`);
 const diceEl = document.querySelector('.dice');
+const newBtn = document.querySelector('.btn--new');
+const rollBtn = document.querySelector('.btn--roll');
+const holdBtn = document.querySelector('.btn--hold');
 
 player0TotalScoreEl.textContent = player0TotalScore;
 player1TotalScoreEl.textContent = player1TotalScore;
 player1CurrentScoreEl.textContent = player1CurrentScore;
 
 // Event handlers
-document.querySelector('.btn--roll').addEventListener('click', rollDice);
+rollBtn.addEventListener('click', rollDice);
 
 function rollDice() {
-  let diceRoll = Math.trunc(Math.random() * 6) + 1;
+  const diceRoll = Math.trunc(Math.random() * 6) + 1;
   displayDice(diceRoll);
   if (diceRoll !== 1) {
     currentScore += diceRoll;
-    document.querySelector(`#current--${activePlayer}`).textContent =
-      currentScore;
+    currentScoreEl.textContent = currentScore;
     // CHANGE LATER
   } else {
   }
