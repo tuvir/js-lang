@@ -11,6 +11,8 @@ let currentScore = 0;
 // Array which stores total scores of each players
 const totalScoresArr = [0, 0];
 
+const scoreToWin = 10;
+
 // Variables of score and dice elements
 const player0TotalScoreEl = document.querySelector('#score--0');
 const player1TotalScoreEl = document.querySelector('#score--1');
@@ -31,6 +33,7 @@ player1CurrentScoreEl.textContent = player1CurrentScore;
 
 // Event handlers
 rollBtn.addEventListener('click', rollDice);
+holdBtn.addEventListener('click', holdScore);
 
 function rollDice() {
   const diceRoll = Math.trunc(Math.random() * 6) + 1;
@@ -57,4 +60,26 @@ function switchPlayer() {
   currentScore = 0;
   player0SideEl.classList.toggle('player--active');
   player1SideEl.classList.toggle('player--active');
+}
+
+function holdScore() {
+  totalScoresArr[activePlayer] += currentScore;
+  document.querySelector(`#score--${activePlayer}`).textContent =
+    totalScoresArr[activePlayer];
+  if (totalScoresArr[activePlayer] >= scoreToWin) {
+    finishGame();
+  } else {
+    switchPlayer();
+  }
+}
+
+function finishGame() {
+  document
+    .querySelector(`.player--${activePlayer}`)
+    .classList.add('player--winner');
+  document
+    .querySelector(`.player--${activePlayer}`)
+    .classList.remove('player--active');
+  rollBtn.removeEventListener('click', rollDice);
+  holdBtn.removeEventListener('click', holdScore);
 }
