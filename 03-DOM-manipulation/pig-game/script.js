@@ -22,6 +22,9 @@ const newBtn = document.querySelector('.btn--new');
 const rollBtn = document.querySelector('.btn--roll');
 const holdBtn = document.querySelector('.btn--hold');
 
+const player0SideEl = document.querySelector('.player--0');
+const player1SideEl = document.querySelector('.player--1');
+
 player0TotalScoreEl.textContent = player0TotalScore;
 player1TotalScoreEl.textContent = player1TotalScore;
 player1CurrentScoreEl.textContent = player1CurrentScore;
@@ -37,13 +40,21 @@ function rollDice() {
     document.querySelector(`#current--${activePlayer}`).textContent =
       currentScore;
   } else {
-    document.querySelector(`#current--${activePlayer}`).textContent = 0;
-    activePlayer = activePlayer === 0 ? 1 : 0;
-    currentScore = 0;
+    switchPlayer();
   }
 }
 
 function displayDice(diceRoll) {
   diceEl.classList.remove('hidden');
   diceEl.src = `dices-img/dice-${diceRoll}.png`;
+}
+
+function switchPlayer() {
+  document.querySelector(`#current--${activePlayer}`).textContent = 0;
+  document;
+  activePlayer = activePlayer === 0 ? 1 : 0;
+  document;
+  currentScore = 0;
+  player0SideEl.classList.toggle('player--active');
+  player1SideEl.classList.toggle('player--active');
 }
