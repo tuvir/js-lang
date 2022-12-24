@@ -1,21 +1,16 @@
 'use strict';
 // Global variables of players scores
-let player0TotalScore = 0;
-let player1TotalScore = 0;
-let player0CurrentScore = 0;
-let player1CurrentScore = 0;
-
 let activePlayer = 0;
 let currentScore = 0;
 
 // Array which stores total scores of each players
-const totalScoresArr = [0, 0];
+let totalScoresArr = 0;
 
 // Variable which determines the winning total score
 const scoreToWin = 10;
 
 // State variable that check if game is finishe or not
-let gamePlaying = true;
+let gamePlaying = 0;
 
 // Variables of score and dice elements
 const player0TotalScoreEl = document.querySelector('#score--0');
@@ -31,13 +26,12 @@ const holdBtn = document.querySelector('.btn--hold');
 const player0SideEl = document.querySelector('.player--0');
 const player1SideEl = document.querySelector('.player--1');
 
-player0TotalScoreEl.textContent = player0TotalScore;
-player1TotalScoreEl.textContent = player1TotalScore;
-player1CurrentScoreEl.textContent = player1CurrentScore;
-
 // Event handlers
 rollBtn.addEventListener('click', rollDice);
 holdBtn.addEventListener('click', holdScore);
+newBtn.addEventListener('click', initGame);
+
+initGame();
 
 function rollDice() {
   if (gamePlaying) {
@@ -89,6 +83,21 @@ function finishGame() {
   document
     .querySelector(`.player--${activePlayer}`)
     .classList.remove('player--active');
-  // rollBtn.removeEventListener('click', rollDice);
-  // holdBtn.removeEventListener('click', holdScore);
+}
+
+function initGame() {
+  gamePlaying = true;
+  totalScoresArr = [0, 0];
+  activePlayer = 0;
+  currentScore = 0;
+
+  player0TotalScoreEl.textContent = 0;
+  player1TotalScoreEl.textContent = 0;
+  player0CurrentScoreEl.textContent = 0;
+  player1CurrentScoreEl.textContent = 0;
+  player0SideEl.classList.add('player--active');
+  player0SideEl.classList.remove('player--winner');
+  player1SideEl.classList.remove('player--active');
+  player1SideEl.classList.remove('player--winner');
+  diceEl.classList.add('hidden');
 }

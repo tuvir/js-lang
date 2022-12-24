@@ -55,3 +55,4 @@ PIG GAME PROJECT
 - When adding multiple elements of the same nature, for example, 2 score elements, we can give them same class-name, to style them alike, but to interract with them via JS as diffent elements we give them unique id's, by which we select them with 'document.querySelector('')'.
 - When having multiple values, such as scores it's handy to store them in arrays.
 - When you have a program that has two states, like active game and ended game, you can create a state boolean variable that will check the state, and with this variable, you can stop some elements from responding, when the state says so. For example, removing event listeners from buttons, when game is finished.
+- You can declare state variables empty and then reassign them in the initializing function. This function can be also called when you implement restarting feature.
