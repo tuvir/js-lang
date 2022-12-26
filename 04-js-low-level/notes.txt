@@ -3,10 +3,22 @@ JS HIGH-LEVEL OVERWIEV
 - Garbage collection: a process which cleans the unused memory automatically.
 - Interpreted (JIT compiled): JS program automatically converts to machine code, via JS engine.
 - Multi-paradigm: you can use multiple approaches when writing code in JS, like OOP pr procedural.
-- Prototype-based object-oriented: simply - everything which isn't primitive value is an object. When we make an object, it has a prototype, which has all it's methods inherited from that prototype.
+- Prototype-based object-oriented: simply - everything which isn't primitive value is an object. When we make an object, it has a prototype, object has all it's methods inherited from that prototype.
 - First-class functions: all JS functions can be treated as regular variables and have the behavior and the usage of variables.
 - Dynamically-typed: when creating a variable in JS we don't state which type of data will variable hold. Instead, JS automaticaly figures the type base on the variable value. 
 - Single-threaded with non-blocking event loop: simply: JS has only one thread of instructions to cpu. For that thread not to block, non-blocking event loop is utilised, which allows certain proccesses to be executed in the background and stick in thread once they are done.\
 
 JS ENGINE AND RUNTIME
-- 
+- JS engine is a program that executes the JS code. Most browsers have their own engine, the most popular one is Chrome' V8. It also powers Node JS.
+- Each engine has 2 memory modules: call stack and heap. Call stack is a structured place where code instructions are being executed with execution contexts. Heap is an unstructured memory pool where all objects needed for our program.
+- Types of code execution: compilation: source code traslates to machine code and stores in executable file. Program starts when file is executed. Interpretation: code is being executed line by line while converting to machine code at the same time. Preety slow. Just-in-time compilation: code is being compiled to machinde code, but without the separate file, instead, it's executes immediately.
+- Working of JS engine
+- 1. Parsing the code: reading the code and plasing it in AST(abstract syntax tree) in ordered and structured way. Each JS keyword is being translated into meaningful way the placed into AST. AST is then used to generate machinde code.
+- 2. Compilation: AST is getting compiled to machine code, without making the separate file for it.
+- 3. Execution: machine code gets executed. This happens in the call stack.
+- 4. Optimization: machine code generated at first can be slow, which leads to it recompiling, then replacing the previous code, then executing. This allows the program to start running as fast as possible and then getting optimised on the go. All oof this happens on different threads which cannot be accessed from main thread.
+- JS runtime
+- Browser runtime is kinda a big box, which stores all JS related stuff. Engine, web APIs and callback queue.
+- APIs are not part of JS but they are getting provided to engine, and are accessible on window object.
+- Callback queue is a data structure that contains all executed functions in order, including all the event listeners functions. After an event occurs, callback function is getting called and put into callback queue. When call stack gets empty, function gets placed in the stack to be executed.
+- Event loop is what doing all of this: it takes functions from callback queue and puts them in stack, where the get executed.
