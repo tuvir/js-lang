@@ -1,0 +1,12 @@
+JS HIGH-LEVEL OVERWIEV
+- High-level: layer of abstractions that allow developers to not manually work with memory.
+- Garbage collection: a process which cleans the unused memory automatically.
+- Interpreted (JIT compiled): JS program automatically converts to machine code, via JS engine.
+- Multi-paradigm: you can use multiple approaches when writing code in JS, like OOP pr procedural.
+- Prototype-based object-oriented: simply - everything which isn't primitive value is an object. When we make an object, it has a prototype, which has all it's methods inherited from that prototype.
+- First-class functions: all JS functions can be treated as regular variables and have the behavior and the usage of variables.
+- Dynamically-typed: when creating a variable in JS we don't state which type of data will variable hold. Instead, JS automaticaly figures the type base on the variable value. 
+- Single-threaded with non-blocking event loop: simply: JS has only one thread of instructions to cpu. For that thread not to block, non-blocking event loop is utilised, which allows certain proccesses to be executed in the background and stick in thread once they are done.\
+
+JS ENGINE AND RUNTIME
+- 
