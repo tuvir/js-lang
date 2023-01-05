@@ -6,12 +6,12 @@ JS HIGH-LEVEL OVERWIEV
 - Prototype-based object-oriented: simply - everything which isn't primitive value is an object. When we make an object, it has a prototype, object has all it's methods inherited from that prototype.
 - First-class functions: all JS functions can be treated as regular variables and have the behavior and the usage of variables.
 - Dynamically-typed: when creating a variable in JS we don't state which type of data will variable hold. Instead, JS automaticaly figures the type base on the variable value. 
-- Single-threaded with non-blocking event loop: simply: JS has only one thread of instructions to cpu. For that thread not to block, non-blocking event loop is utilised, which allows certain proccesses to be executed in the background and stick in thread once they are done.\
+- Single-threaded with non-blocking event loop: simply: JS has only one thread of instructions to cpu. For that thread not to block, non-blocking event loop is utilised, which allows certain proccesses to be executed in the background and stick in thread once they are done.
 
 JS ENGINE AND RUNTIME
 - JS engine is a program that executes the JS code. Most browsers have their own engine, the most popular one is Chrome' V8. It also powers Node JS.
-- Each engine has 2 memory modules: call stack and heap. Call stack is a structured place where code instructions are being executed with execution contexts. Heap is an unstructured memory pool where all objects needed for our program.
-- Types of code execution: compilation: source code traslates to machine code and stores in executable file. Program starts when file is executed. Interpretation: code is being executed line by line while converting to machine code at the same time. Preety slow. Just-in-time compilation: code is being compiled to machinde code, but without the separate file, instead, it's executes immediately.
+- Each engine has 2 memory modules: call stack and heap. Call stack is a structured place where code instructions are being executed with execution contexts. Heap is an unstructured memory pool that stores all objects needed for our program.
+- Types of code execution: compilation: source code traslates to machine code and stores in executable file. Program starts when file is executed. Interpretation: code is being executed line by line while converting to machine code at the same time. Pretty slow. Just-in-time compilation: entire code of the program is being converted to machinde code at once, but without the separate file, instead, it's executes immediately.
 - Working of JS engine
 - 1. Parsing the code: reading the code and plasing it in AST(abstract syntax tree) in ordered and structured way. Each JS keyword is being translated into meaningful way the placed into AST. AST is then used to generate machinde code.
 - 2. Compilation: AST is getting compiled to machine code, without making the separate file for it.
@@ -21,4 +21,23 @@ JS ENGINE AND RUNTIME
 - Browser runtime is kinda a big box, which stores all JS related stuff. Engine, web APIs and callback queue.
 - APIs are not part of JS but they are getting provided to engine, and are accessible on window object.
 - Callback queue is a data structure that contains all executed functions in order, including all the event listeners functions. After an event occurs, callback function is getting called and put into callback queue. When call stack gets empty, function gets placed in the stack to be executed.
-- Event loop is what doing all of this: it takes functions from callback queue and puts them in stack, where the get executed.
+- Event loop is what doing all of this: it takes functions from callback queue and puts them in stack, where they get executed.
+
+EXEC CONTEXTS AND CALL STACK
+- Execution context (EC) is an environment where some piece of code is executed. This environment also stores all nessesary information for code execution like arguments passed to the function or local variables.
+- Immediately after compilation, code execution starts. Firstly, the global execution context is being created. This context includes all the top level codee like variable and function declarations or top level function calls. Basically, all the code that is not inside the function.
+- After the global EC is created it's being executed right away. CPU processes machine code that it receives from global EC.
+- When global EC has finished executing, the execution of funcitons begins. For each function call, separate EC is created, which stores all information for the function to run. This is also happens to methods.
+- All these EC are forming the call stack. After all these function are done executing, the call stack is empty and the engine will be waiting for new function calls to be pushed in call stack and executed, for example, event handler functions. These callback functions are provided by event loop of js.
+- EC inside
+- 1. Variable environment: let, const, var declarations; functions; arguments object.
+- 2. Scope chain. Need for functions to get access to variables outside the function scope.
+- 3. 'this' keyword.
+- All of this is generated during 'creation phase', right before the execution.
+- Arrow function ECs do NOT include 'this' and arguments object.
+- Arguments object is an array-like structure that contains all the argumentas in order. This is not avaliable for arrow functions.
+- Working of Call stack
+- Call stak is a 'place' where all ECs are being stored. The very top EC will be excuted first, then, it will be removend and the EC after it will start excuting. This queue allows engine to know where it is in the excution.
+- Each function call creates new EC fo the called function. This EC is being placed on top of the call stack. If a function has a function call inside it's body, the execution of first function will be paused, whe second inside function is being called. First function will continue executing when the inside one will return the value.
+- When function returns the value, it's EC, which is on top, will be removed (popped) from memory, making the bottom EC the top one, therefore, it will start executing.
+- Global EC will be created first, which will make it to stay in the very bottom of the call stack, even after the program 'finishes'. Global EC is only removed when user closes the browser or browser tab.
