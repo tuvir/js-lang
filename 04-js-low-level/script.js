@@ -1,4 +1,29 @@
 'use strict';
+console.log(this);
+
+function calcAge(birthYear) {
+  console.log(2023 - birthYear);
+  console.log(this);
+}
+calcAge(2003);
+
+const calcAgeArr = (birthYear) => {
+  console.log(2023 - birthYear);
+  console.log(this);
+};
+calcAgeArr(2012);
+
+const person = {
+  age: 2006,
+  calcAge: function () {
+    console.log(2023 - this.age);
+  },
+};
+
+person.calcAge();
+/*
+
+HOISTING AND TDZ PRACTICE
 
 console.log(firstName);
 // console.log(x);
@@ -31,8 +56,12 @@ var productCount = 10;
 function deleteProducts() {
   console.log('Products deleted!');
 }
+*/
 
 /*
+
+SCOPING IN PRACTICE
+
 function calcAge(birthYear) {
   const age = 2023 - birthYear;
   //   const firstName = 'Petr2';
