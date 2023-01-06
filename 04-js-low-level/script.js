@@ -1,5 +1,27 @@
 'use strict';
 
+console.log(firstName);
+// console.log(x);
+// console.log(job);
+// console.log(age);
+
+var firstName = 'Petr';
+let job = 'Developer';
+const age = '18';
+
+console.log(addDec(2, 3));
+function addDec(a, b) {
+  return a + b;
+}
+
+console.log(addExp);
+var addExp = function (a, b) {
+  return a + b;
+};
+
+console.log(addArr(2, 3));
+const addArr = (a, b) => a + b;
+/*
 function calcAge(birthYear) {
   const age = 2023 - birthYear;
   //   const firstName = 'Petr2';
@@ -28,3 +50,4 @@ function calcAge(birthYear) {
 
 const firstName = 'Petr';
 calcAge(2003);
+*/

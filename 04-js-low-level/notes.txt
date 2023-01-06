@@ -71,6 +71,9 @@ VARIABLE ENVIRONMENT
 - 'var' variables: Hoisted, but their initial value will be 'undefined'. This is a source of bugs, so we dont use var.
 - 'let' and 'const' variables: Practically not hoisted, their initial value is set at 'unitialized', and they are placed in TDZ (temporal dead zone). So, if we try to use 'let' or 'const' declared variable before its actual declaration we get an error.
 - Arrow and expression functions: depends on type variable declaration. If using 'let' or 'const' - practically not hoisted. This is why we declare functions of these types before we use them in the code.
-- TDZ was intoduced to actively avoid variable usage before declaration, by giving an error in this case. TDZ represents the lines of code ABOVE the variable declaration, where variable cannot be used.
+- TDZ was intoduced to actively avoid variable usage before declaration, by giving an error in this case. TDZ represents the lines of code ABOVE the variable declaration, inside it's local scope, where variable cannot be used.
 - Second reason of TDZ is to make 'const' variables work. It should be impossible to first assign 'unitialized' to const and then give it it's real value.
 - Hoisting makes code more readable through function declarations.
+
+HOISTING AND TDZ IN PRACTICE
+- When declaring arrow functions or function expressions with 'var', and the use these functions before their initialization, the program will treat them as 'undefined' because of hoisting, which will lead to an error.
