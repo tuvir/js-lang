@@ -56,3 +56,6 @@ SCOPING AND SCOPE CHAIN
 - If we have multiple code blocks inside one parent scope, 'siblings' scopes will NOT have access to variables of one another. 
 - Global scope variables are stored in global EC variable environment at the beggining of program execution.
 - SCope chain is an order in which functions are written in the code, but it has nothing to do with order in which functions were CALLED (call stack).
+
+SCOPING IN PRACTICE
+- It's handy to imagine scopes as boxes that can have other boxes inside them or themselves are inside the boxes. If a scope is inside the other scope, it has access to the outer variables, but outer scope doen't have access to it.
