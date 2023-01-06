@@ -1,4 +1,19 @@
 'use strict';
+
+const person = {
+  age: 2006,
+  firstName: 'Petr',
+  calcAge: function () {
+    console.log(2023 - this.age);
+  },
+  greet: () => console.log(this.firstName),
+};
+
+person.greet();
+/*
+
+THIS KEYWORD IN DIFFERENT CALLS
+
 console.log(this);
 
 function calcAge(birthYear) {
@@ -33,6 +48,7 @@ petr.calcAge();
 const f = person.calcAge;
 
 f();
+*/
 /*
 
 HOISTING AND TDZ PRACTICE
