@@ -77,3 +77,5 @@ VARIABLE ENVIRONMENT
 
 HOISTING AND TDZ IN PRACTICE
 - When declaring arrow functions or function expressions with 'var', and the use these functions before their initialization, the program will treat them as 'undefined' because of hoisting, which will lead to an error.
+- List of best codewriting practices for JS: 1. Don't use 'var'. 2. Use 'const' whenever possible, 'let' only when variable will change. 3. Declare funcitons before their usage.
+- Variables declared with 'var' create a property on window object, which can lead to bugs.

@@ -14,13 +14,24 @@ function addDec(a, b) {
   return a + b;
 }
 
-console.log(addExp);
-var addExp = function (a, b) {
-  return a + b;
-};
+// console.log(addExp);
+// var addExp = function (a, b) {
+//   return a + b;
+// };
 
-console.log(addArr(2, 3));
-const addArr = (a, b) => a + b;
+// console.log(addArr(2, 3));
+// const addArr = (a, b) => a + b;
+
+// ! Bad hoisting example
+
+if (!productCount) deleteProducts();
+
+var productCount = 10;
+
+function deleteProducts() {
+  console.log('Products deleted!');
+}
+
 /*
 function calcAge(birthYear) {
   const age = 2023 - birthYear;
