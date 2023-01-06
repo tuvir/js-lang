@@ -59,3 +59,4 @@ SCOPING AND SCOPE CHAIN
 
 SCOPING IN PRACTICE
 - It's handy to imagine scopes as boxes that can have other boxes inside them or themselves are inside the boxes. If a scope is inside the other scope, it has access to the outer variables, but outer scope doen't have access to it.
+- If, for some reason, you need to extract a variable value from inner block scope, you have to use var when declaring this variable. 'var' is function scoped, not block scoped, whichmeans that it will be accessible from inner block. This is not proper technique however.
