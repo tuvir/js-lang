@@ -21,6 +21,18 @@ const person = {
 };
 
 person.calcAge();
+
+const petr = {
+  age: 2003,
+};
+
+petr.calcAge = person.calcAge;
+
+petr.calcAge();
+
+const f = person.calcAge;
+
+f();
 /*
 
 HOISTING AND TDZ PRACTICE

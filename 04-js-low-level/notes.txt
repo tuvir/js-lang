@@ -88,3 +88,7 @@ THIS KEYWORD
 - Arrow functions: they DO NOT get their own 'this' keyword. Instead, they will pickup 'this' from the upper or 'parent' function scope, which is called 'lexical this'. This can lead to some hard bugs, so remember it for good!
 - Event handler functions: 'this' will point to the DOM element on which the handler is attached to.
 - 'this' doesn't point to function itself, nor does it point to the variable environment of the current function.
+
+THIS KEYWORD IN PRACTICE
+- WHen we declare a method on object we can create another object of similiar structure and then simply borrow the previously created method from first object, like this: newObject.methodName = firstObject.method name. When we will call the method on a new object it will be used correctly.
+- To create a reusable method like that, 'this' keyword can be utilised which makes it a very powerful tool.
