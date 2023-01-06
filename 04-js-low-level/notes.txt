@@ -97,3 +97,4 @@ FUNCTIONS VS ARROW FUNCTIONS
 - Object literal DOES NOT create a scope of it's own. Therefore, everyting defined inside the object is located in upper scope.
 - When declaring an object method with arrow function, this keyword will not point to object property, instead it will point to upper scope property (since object literals do not create a scope of their own). This will lead to 'undefined' (or worse) when using a method, since the property which this refers to is not defined.
 - When creating object methods, use function expressions.
+- If we add a function inside the method and then call this function iside the method, 'this' keyword will be 'undefined' instead of object. This happens because of when function call is used in strict mode, 'this' is set to undefined.

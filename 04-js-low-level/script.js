@@ -5,11 +5,18 @@ const person = {
   firstName: 'Petr',
   calcAge: function () {
     console.log(2023 - this.age);
+
+    const generation = function () {
+      console.log(this);
+      console.log(this.age >= 2000 && this.age <= 2012);
+    };
+    generation();
   },
   greet: () => console.log(this.firstName),
 };
 
 person.greet();
+person.calcAge();
 /*
 
 THIS KEYWORD IN DIFFERENT CALLS
