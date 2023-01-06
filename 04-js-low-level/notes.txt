@@ -63,3 +63,14 @@ SCOPING IN PRACTICE
 - If we turn off strict mode, the functions become function scoped, instead of block scoped, which allows to extract the function returned value even if it is inside of a block. But strict mode should be used ALWAYS.
 - THe working of scope allows to create multiple variables with same name, as long as they are placed in different scopes. For example, if we have two variables with same name, but different values, one in GS and one in FS, and function needs the variable, it will simply take it's own scope variable, instead of chainig to GS. This is also why we can have funcitons with same parameter names.
 - Other way to change variable value is through reassigning it. We can reassign variables that are in the same or outer scopes.
+
+VARIABLE ENVIRONMENT
+- Hoisting is a process which makes some types of variables accessible before their declaration in the code. They are kinda moved to the top of the code block, even when they are lower than their usage occurences.
+- The hoisting happens during EC 'creation phase' when code is scanned for variable declarations and for each variable a new property is being added to the variable environment object.
+- Funciton declarations: FDs are hoisted, which means that they can be called before they get defined in the code. Their initial value will be the actul function.
+- 'var' variables: Hoisted, but their initial value will be 'undefined'. This is a source of bugs, so we dont use var.
+- 'let' and 'const' variables: Practically not hoisted, their initial value is set at 'unitialized', and they are placed in TDZ (temporal dead zone). So, if we try to use 'let' or 'const' declared variable before its actual declaration we get an error.
+- Arrow and expression functions: depends on type variable declaration. If using 'let' or 'const' - practically not hoisted. This is why we declare functions of these types before we use them in the code.
+- TDZ was intoduced to actively avoid variable usage before declaration, by giving an error in this case. TDZ represents the lines of code ABOVE the variable declaration, where variable cannot be used.
+- Second reason of TDZ is to make 'const' variables work. It should be impossible to first assign 'unitialized' to const and then give it it's real value.
+- Hoisting makes code more readable through function declarations.
