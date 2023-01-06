@@ -5,7 +5,7 @@ function calcAge(birthYear) {
   //   const firstName = 'Petr2';
   function printAge() {
     // const firstName = 'Petr3';
-    const str = `${firstName} is ${age} years old born in ${birthYear}`;
+    let str = `${firstName} is ${age} years old born in ${birthYear}`;
     console.log(str);
     if (birthYear >= 2000 && birthYear <= 2012) {
       //   const firstName = 'Petr4';
@@ -14,7 +14,10 @@ function calcAge(birthYear) {
       function sumNumbers(num1, num2) {
         return num1 + num2;
       }
+      //   str = `New str is here!`;
     }
+    // console.log(str);
+
     // console.log(sumNumbers(1, 2)); works without strict mode
   }
   //   console.log(sumNumbers(1, 2));
