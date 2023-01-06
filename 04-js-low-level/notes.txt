@@ -79,3 +79,12 @@ HOISTING AND TDZ IN PRACTICE
 - When declaring arrow functions or function expressions with 'var', and the use these functions before their initialization, the program will treat them as 'undefined' because of hoisting, which will lead to an error.
 - List of best codewriting practices for JS: 1. Don't use 'var'. 2. Use 'const' whenever possible, 'let' only when variable will change. 3. Declare funcitons before their usage.
 - Variables declared with 'var' create a property on window object, which can lead to bugs.
+
+THIS KEYWORD
+- 'this' keyword/variable is a special variable that is created for every execution context. This variable takes the value of (points to) the 'owner' of the function in which 'this' keyword is used.
+- 'this' variable value is not static. It depends on the way function was called and is declared only when the function gets called.
+- Method call: 'this' will point to the object which calls the method. Example: we create an object which has birth year. Iside this object we create the method, which takes the object year property using 'this' keyword, like that: '2023 - this.birthYear'. When we call the method on an object this keywords simply gets replaced with object name, giving the access to it's properties. This is a good way to make reusable code.
+- Function calls: in strict mode 'this' will be 'undefined'. Without the strict mode it will point to global window object, which is not good.
+- Arrow functions: they DO NOT get their own 'this' keyword. Instead, they will pickup 'this' from the surrounding function scope, which is called 'lexical this'. This can lead to some hard bugs, so remember it for good!
+- Event handler functions: 'this' will point to the DOM element on which the handler is attached to.
+- 'this' doesn't point to function itself, nor does it point to the variable environment of the current function.
