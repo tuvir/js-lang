@@ -11,9 +11,6 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-  order: function (starterIndex, mainIndex) {
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-  },
   openingHours: {
     thu: {
       open: 12,
@@ -28,35 +25,43 @@ const restaurant = {
       close: 24,
     },
   },
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
 };
 
-// Exercises
-// const arr = [1, 2, 3];
-// // Without destructuring
-// const a = arr[0];
-// const b = arr[1];
-// const c = arr[2];
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
 
-// Using destructuring
-// const [x, y, z] = arr;
-// console.log(x, y, z);
+/*
+-- DESTRUCTURING ARRAYS --
+const arr = [1, 2, 3];
+Without destructuring
+const a = arr[0];
+const b = arr[1];
+const c = arr[2];
+
+Using destructuring
+const [x, y, z] = arr;
+console.log(x, y, z);
 
 let [primary, secondary] = restaurant.categories;
 console.log(primary, secondary);
 
-// Switching variables with destructuring
+Switching variables with destructuring
 [primary, secondary] = [secondary, primary];
 console.log(primary, secondary);
 
-// Extracting multiple values from function or method
+Extracting multiple values from function or method
 const [starter, main] = restaurant.order(1, 2);
 console.log(`You've ordered ${starter} followed by ${main}`);
 
-// Nested destructuring
+Nested destructuring
 const nestedArr = [1, 2, 3, [4, 5], 6];
 const [a, b, c, [d, e], f] = nestedArr;
 console.log(a, b, c, d, e, f);
 
-// Setting default values to destructured variables
+Setting default values to destructured variables
 const [i = 'def', k = 'def', j = 'def'] = [10, 20];
 console.log(i, k, j);
+*/

@@ -7,3 +7,6 @@ ARRAY DESTRUCTURING
 - Destructuring allows us to extract as many values out of a function or method. If it returns an array, we simply destructure it into multiple variables and then use them as regular ones.
 - We can use nested destructuring to extract values from nested arrays like so: 'const [a, b, [c, d]] = arr[1, 2, [3, 4]]'.
 - You can set default values to destructured variables, when you do not lnow the length of an array. This will make the destructured variables that point to nonexistent array elements get default value, instead of 'undefined'. Example: 'const [i = 'def', k = 'def', j = 'def'] = [10, 20]', the j value will be 'def' not undefined. Default value can be anything.
+
+OBJECT DESTRUCTURING
+- Object destructuring works allows you to unpack specific values of object properties as variables. We create a variable list using '{}' in which we add variables with exact same names of object properties, that we want to extract. Example: 'const {firstName, age, gender} = obect'.
