@@ -1,5 +1,20 @@
 'use strict';
 
+let age = 19;
+let oldAge = age;
+age = 20;
+console.log(age, oldAge);
+
+const me = {
+  firstName: 'Petr',
+  age: 19,
+};
+
+const friend = me;
+friend.age = 25;
+console.log('Me', me, 'Friend', friend);
+/*
+ARROW VS REGULAR FUNCITONS
 const person = {
   age: 2006,
   firstName: 'Petr',
@@ -23,20 +38,20 @@ person.greet();
 person.calcAge();
 
 // 'ARGUMENTS' KEYWORD
-const sumNumbers = function (a, b) {
+function sumNumbers(a, b) {
   console.log(arguments);
   return a + b;
-};
+}
 
 sumNumbers(1, 2, 3, 4);
 sumNumbers(10, 20);
 
-const sumNumbersArr = (a, b) => {
-  console.log(arguments);
-  return a + b;
-};
+// const sumNumbersArr = (a, b) => {
+//   console.log(arguments);
+//   return a + b;
+// };
 
-sumNumbersArr(1, 2);
+// sumNumbersArr(1, 2);
 /*
 
 THIS KEYWORD IN DIFFERENT CALLS

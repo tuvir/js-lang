@@ -99,3 +99,9 @@ FUNCTIONS VS ARROW FUNCTIONS
 - When creating object methods, use function expressions.
 - If we add a function inside the method and then call this function iside the method, 'this' keyword will be 'undefined' instead of object. This happens because of when function call is used in strict mode, 'this' is set to undefined.
 - To avoid that there are two ways: 1. we create a variable in which we store the 'this' keyword OUTSIDE the function body and use this variable inside the function. That way, 'this' value will be preserved instead of turning 'undefined'. This is an older method. 2. We use an arrow function instead of FE, since AF do not have their own 'this' keyword and get it from upper scope. This will ensure that it works correctly.
+- Arguments keyword is an array-like structure that displays the arguments we passed to function when calling it. It's starts from 0, like an array. This keyword is present only in function declarations and function expressions. Arrow function don't get their arguments list.
+
+PRIMITIVES VS OBJECTS
+- Primitive types are stored in EC inside the call stack, and reference types (objects) are stored in memory heap.
+- Primitive variables get stored in call stack in a way that each variable gets an identifier with it's name. Then for each variable a memory adress is being reserved, and the value of a variable stores in there. The identifier itself DOES NOT point to it's value but to the memeory ADRESS, which holds the value.
+- If we evaluate one variable to the other, the new wariable will not get new memorey adress with same value, but it will just point to the same memory adress.
