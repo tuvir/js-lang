@@ -4,4 +4,6 @@ ARRAY DESTRUCTURING
 - With DA we can access different elements of an array, without minding their order. Example: if we have an array with five elements, and we want to access element 0 and 4, we write the DA like this - 'const [element0, , , element4] = arr'. This will automatically skip the missing elements and get us only the ones we need.
 - The DA can have access to elements that are not in the array, which will be 'undefined'.
 - Destructuring makes it possible to switch the variables order without using the temporary variables. To do that we declare the DA with 'let' then we reassign it, switching the order of the variavles, like so: '[first, second] = [second, first]'.
-- Destructuring allows us to extract as many values out of a function or method. If it returns an array, we simmply destructure it into multiple variables and then use them as regular ones.
+- Destructuring allows us to extract as many values out of a function or method. If it returns an array, we simply destructure it into multiple variables and then use them as regular ones.
+- We can use nested destructuring to extract values from nested arrays like so: 'const [a, b, [c, d]] = arr[1, 2, [3, 4]]'.
+- You can set default values to destructured variables, when you do not lnow the length of an array. This will make the destructured variables that point to nonexistent array elements get default value, instead of 'undefined'. Example: 'const [i = 'def', k = 'def', j = 'def'] = [10, 20]', the j value will be 'def' not undefined. Default value can be anything.

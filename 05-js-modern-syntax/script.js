@@ -31,11 +31,11 @@ const restaurant = {
 };
 
 // Exercises
-const arr = [1, 2, 3];
-// Without destructuring
-const a = arr[0];
-const b = arr[1];
-const c = arr[2];
+// const arr = [1, 2, 3];
+// // Without destructuring
+// const a = arr[0];
+// const b = arr[1];
+// const c = arr[2];
 
 // Using destructuring
 // const [x, y, z] = arr;
@@ -48,5 +48,15 @@ console.log(primary, secondary);
 [primary, secondary] = [secondary, primary];
 console.log(primary, secondary);
 
+// Extracting multiple values from function or method
 const [starter, main] = restaurant.order(1, 2);
 console.log(`You've ordered ${starter} followed by ${main}`);
+
+// Nested destructuring
+const nestedArr = [1, 2, 3, [4, 5], 6];
+const [a, b, c, [d, e], f] = nestedArr;
+console.log(a, b, c, d, e, f);
+
+// Setting default values to destructured variables
+const [i = 'def', k = 'def', j = 'def'] = [10, 20];
+console.log(i, k, j);
