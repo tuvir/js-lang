@@ -19,6 +19,18 @@ console.log('Before marriage: ', person);
 console.log('After marriage: ', marriedPerson);
 
 // Copying an object
+const person2 = {
+  firstName: 'Polina',
+  lastName: 'Rozygraeva',
+  age: 21,
+  family: ['Olga', 'Ivan'],
+};
+
+const personCopy = Object.assign({}, person2);
+personCopy.lastName = 'Nikitina';
+personCopy.family[0] = 'Sergey';
+console.log('Before marriage: ', person2);
+console.log('After marriage: ', personCopy);
 
 /*
 PRIMITIVES VS OBJECTS

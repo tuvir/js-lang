@@ -113,3 +113,6 @@ PRIMITIVES VS OBJECTS
 PRIMITIVES VS OBJECTS IN PRACTICE
 - When we try to replicate an object by making a new variable and evaluating it to the existing objects, instead of creating a second object in the heap, we just add another variable, that simply points to the same memory adress of a previous object in heap.
 - We can change individual property values of objects, but we cannot assign an entirely new object to a variable, declared with 'const'.
+- To properly copy an object we use the 'Object.assign({}, referenceObject)' function, as a value of a new object. This will create a completely new object in heap which means we can change certain properties of it without changing them on the first object. 
+- This method will create a 'shallow copy' of an object, which means that if the original object has another object inside of it, the inside one will still point to the same memory adress. If the inner object is going to be changed in copy object, it will affect the original object too.
+- To create a 'deep clone' of an object, which will include the inner objects as well, an external JS library is used.
