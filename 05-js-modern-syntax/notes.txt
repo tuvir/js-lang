@@ -13,3 +13,4 @@ OBJECT DESTRUCTURING
 - We can give individual names to the object variables, to make them more distinct from object properties names. Example: 'const {firstName: personName, age: personAge, gender: personSex}'. We then use new variable names when we need to use them.
 - Object destructuring is a very powerful tool that is often used to extract values from API' calls, which usually come as objects.
 - You can give default values for destructured object variables in case you do not know which properties will present on an object. Example: 'const {height = 'def', firstName = []}'.
+- You can mutate the variable value to the object variable value, using OD. Example: 'let a = 1, b = 2; const obj = {a: 10, b: 20,}; ({a, b}) = obj'. In this case a and b values will mutate to 10 and 20. The usage of braces is required, since we can't evaluate a block to anything.

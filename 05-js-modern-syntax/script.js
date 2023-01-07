@@ -46,6 +46,21 @@ console.log(restaurantName, hours, sections);
 const { menu = [], mainMenu: main = [] } = restaurant;
 console.log(menu, main);
 
+// Mutating variables using obj destructuring
+let a = 10,
+  b = 20;
+const obj = {
+  a: 19,
+  b: 23,
+  c: 44,
+};
+
+({ a, b } = obj);
+console.log(a, b);
+
+// Changing the name of mutable variable
+// let {a: first, b: second} = obj;
+
 /*
 -- DESTRUCTURING ARRAYS --
 const arr = [1, 2, 3];
