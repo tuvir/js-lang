@@ -1,3 +1,6 @@
 ARRAY DESTRUCTURING
 - Destructuring is a feature, that allows to unpack values of an array in differrent variables. In general, this lets us break a complex data structure down in smaller pieces.
 - To destructure an array we declare an array, then we declare the destructuring assignment, like this: 'const [a, b, c] = arr'. a, b and c will become the elements of an array, and we can freely use them, as if they were regular variables.
+- With DA we can access different elements of an array, without minding their order. Example: if we have an array with five elements, and we want to access element 0 and 4, we write the DA like this - 'const [element0, , , element4] = arr'. This will automatically skip the missing elements and get us only the ones we need.
+- The DA can have access to elements that are not in the array, which will be 'undefined'.
+- Destructuring makes it possible to switch the variables order without using the temporary variables. To do that we declare the DA with 'let' then we reassign it, switching the order of the variavles, like so: '[first, second] = [second, first]'.
