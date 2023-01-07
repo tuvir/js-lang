@@ -1,5 +1,27 @@
 'use strict';
 
+// Primitive types
+let lastName = 'Nikolaev';
+const oldLastName = lastName;
+lastName = 'Kulikov';
+console.log(lastName, oldLastName);
+
+const person = {
+  firstName: 'Polina',
+  lastName: 'Rozygraeva',
+  age: 21,
+};
+
+// Reference types
+const marriedPerson = person;
+marriedPerson.lastName = 'Nikitina';
+console.log('Before marriage: ', person);
+console.log('After marriage: ', marriedPerson);
+
+// Copying an object
+
+/*
+PRIMITIVES VS OBJECTS
 let age = 19;
 let oldAge = age;
 age = 20;

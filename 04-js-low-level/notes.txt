@@ -109,3 +109,7 @@ PRIMITIVES VS OBJECTS
 - When we create an object it's value gets stored in heap at a random memory adress. It then gets an identifier which points to memory adress in stack, which points not to value of an object, but to memory adress in heap, where object values are stored. This is done because the object values can be too large to be stored in stack.
 - If we make a object and evaluate it to already created object, this value will get to identifier, which will point to the SAME memory adress IN STACK that the object points to, which will point to the same memory adress IN HEAP. If we then decide to change some object property on our new object, it will actually change it for both objects, since they point to the same adress IN HEAP.
 - Whenever we 'copy' an object, it's just creates a new variable, that points to the SAME memory adress IN STACK, therefore, the same object.
+
+PRIMITIVES VS OBJECTS IN PRACTICE
+- When we try to replicate an object by making a new variable and evaluating it to the existing objects, instead of creating a second object in the heap, we just add another variable, that simply points to the same memory adress of a previous object in heap.
+- We can change individual property values of objects, but we cannot assign an entirely new object to a variable, declared with 'const'.
