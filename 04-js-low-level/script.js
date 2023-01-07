@@ -21,6 +21,22 @@ const person = {
 
 person.greet();
 person.calcAge();
+
+// 'ARGUMENTS' KEYWORD
+const sumNumbers = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+
+sumNumbers(1, 2, 3, 4);
+sumNumbers(10, 20);
+
+const sumNumbersArr = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+
+sumNumbersArr(1, 2);
 /*
 
 THIS KEYWORD IN DIFFERENT CALLS
