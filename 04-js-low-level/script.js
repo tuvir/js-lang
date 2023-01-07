@@ -4,15 +4,19 @@ const person = {
   age: 2006,
   firstName: 'Petr',
   calcAge: function () {
-    console.log(2023 - this.age);
-
-    const generation = function () {
-      console.log(this);
+    // using arrow function instead
+    const generationArr = () => {
       console.log(this.age >= 2000 && this.age <= 2012);
+    };
+    generationArr();
+    // making a 'that' or 'self' variable
+    const that = this;
+    const generation = function () {
+      console.log(that.age >= 2000 && that.age <= 2012);
     };
     generation();
   },
-  greet: () => console.log(this.firstName),
+  greet: () => console.log(`Hey, ${this.firstName}`),
 };
 
 person.greet();

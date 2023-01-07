@@ -48,10 +48,10 @@ SCOPING AND SCOPE CHAIN
 - Scope: space in code where certain variable is declared. For functions it will be variable environment. There is global scope, function scope, block scope.
 - Variable scope: code section or block iside which the certain variable can be accessed.
 - Global scope: any variable that is declared outside of any function resides in global scope, therefore, it can be accessed in any poin of the program.
-- Funciton scope: variable declared INSIDE the function body are only accessible inside the dunciton. Also called 'local scope'.
+- Funciton scope: variable declared INSIDE the function body are only accessible inside the funciton. Also called 'local scope'.
 - Block scope (ES6): variables are only accessible inside the block with '{}' (like if statement). This applies ONLY to 'let' and 'const'. functions are also block-scoped, in strict mode.
 - Current scope will have access to variables inside it's 'parent' scope. Example: if we declare a function inside global scope, the function scope will have access to the global 'parent' scope variables, if they are needed.
-- Scope cahin: basically, a process that check, whether the parent scope of current scope has the access to variables that are needed to current scope. If it has it, the function will proceed, otherwise, an error will occur. This process is called 'variable lookup'.
+- Scope chain: basically, a process that check, whether the parent scope of current scope has the access to variables that are needed to current scope. If it has it, the function will proceed, otherwise, an error will occur. This process is called 'variable lookup'.
 - Variable lookup only works 'upwards', from child scope to parent scope. The parent scope will NEVER have access to child scope variables.
 - If we have multiple code blocks inside one parent scope, 'siblings' scopes will NOT have access to variables of one another. 
 - Global scope variables are stored in global EC variable environment at the beggining of program execution.
@@ -67,7 +67,7 @@ SCOPING IN PRACTICE
 VARIABLE ENVIRONMENT
 - Hoisting is a process which makes some types of variables accessible before their declaration in the code. They are kinda moved to the top of the code block, even when they are lower than their usage occurences.
 - The hoisting happens during EC 'creation phase' when code is scanned for variable declarations and for each variable a new property is being added to the variable environment object.
-- Funciton declarations: FDs are hoisted, which means that they can be called before they get defined in the code. Their initial value will be the actul function.
+- Funciton declarations: FDs are hoisted, which means that they can be called before they get defined in the code. Their initial value will be the actual function.
 - 'var' variables: Hoisted, but their initial value will be 'undefined'. This is a source of bugs, so we dont use var.
 - 'let' and 'const' variables: Practically not hoisted, their initial value is set at 'unitialized', and they are placed in TDZ (temporal dead zone). So, if we try to use 'let' or 'const' declared variable before its actual declaration we get an error.
 - Arrow and expression functions: depends on type variable declaration. If using 'let' or 'const' - practically not hoisted. This is why we declare functions of these types before we use them in the code.
@@ -98,3 +98,4 @@ FUNCTIONS VS ARROW FUNCTIONS
 - When declaring an object method with arrow function, this keyword will not point to object property, instead it will point to upper scope property (since object literals do not create a scope of their own). This will lead to 'undefined' (or worse) when using a method, since the property which this refers to is not defined.
 - When creating object methods, use function expressions.
 - If we add a function inside the method and then call this function iside the method, 'this' keyword will be 'undefined' instead of object. This happens because of when function call is used in strict mode, 'this' is set to undefined.
+- To avoid that there are two ways: 1. we create a variable in which we store the 'this' keyword OUTSIDE the function body and use this variable inside the function. That way, 'this' value will be preserved instead of turning 'undefined'. This is an older method. 2. We use an arrow function instead of FE, since AF do not have their own 'this' keyword and get it from upper scope. This will ensure that it works correctly.
