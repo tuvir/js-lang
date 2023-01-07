@@ -30,15 +30,22 @@ const restaurant = {
   },
 };
 
+// Using destructuring on objects
 const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);
 
+// Renaming the obj destructured variables
 const {
   name: restaurantName,
   openingHours: hours,
   categories: sections,
 } = restaurant;
 console.log(restaurantName, hours, sections);
+
+// Giving default values to obj destructured variables
+const { menu = [], mainMenu: main = [] } = restaurant;
+console.log(menu, main);
+
 /*
 -- DESTRUCTURING ARRAYS --
 const arr = [1, 2, 3];
