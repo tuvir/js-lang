@@ -33,6 +33,12 @@ const restaurant = {
 const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);
 
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: sections,
+} = restaurant;
+console.log(restaurantName, hours, sections);
 /*
 -- DESTRUCTURING ARRAYS --
 const arr = [1, 2, 3];
