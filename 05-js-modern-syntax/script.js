@@ -37,8 +37,19 @@ const restaurant = {
     console.log(`Here's your pasta with ${ing1}, ${ing2} and ${ing3}`);
   },
 };
+// Rest pattern with destructuring
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);
 
-// Spread operator to add array elements to new array
+const [, pasta, risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+
+console.log(pasta, risotto, otherFood);
+/*
+-- SPREAD OPERATOR USAGE --
+Spread operator to add array elements to new array
 const arr1 = [1, 2, 3];
 const arr2 = [...arr1, 4, 5, 6];
 console.log(arr2);
@@ -46,22 +57,22 @@ console.log(arr2);
 const menuNew = [...restaurant.mainMenu, 'Fettucine', 'Tiramisu'];
 console.log(menuNew);
 
-// Spread operator to pass multiple arguments to function
+Spread operator to pass multiple arguments to function
 const arr3 = [10, 20, 30, 2];
 spread(...arr3);
 function spread(arr) {
   console.log(arguments);
 }
 
-// Spread operator to copy an array;
+Spread operator to copy an array;
 const mainMenyCopy = [...restaurant.mainMenu];
 console.log(mainMenyCopy);
 
-// Spread to join multiple arrays
+Spread to join multiple arrays
 const menuWhole = [...restaurant.mainMenu, ...restaurant.starterMenu];
 console.log(menuWhole);
 
-// Spread to divide string into singular elements
+Spread to divide string into singular elements
 const str = 'Kulikov';
 const strToArr = [...str];
 const strToArrAdd = [...str, 'P.', 'S.'];
@@ -69,15 +80,15 @@ console.log(strToArr);
 console.log(strToArrAdd);
 console.log(...strToArrAdd);
 
-// Spread function
+Spread function
 const ingredients = [
-  // prompt('Choose ingredient 1'),
-  // prompt('Choose ingredient 2'),
-  // prompt('Choose ingredient 3'),
+  prompt('Choose ingredient 1'),
+  prompt('Choose ingredient 2'),
+  prompt('Choose ingredient 3'),
 ];
 restaurant.orderPasta(...ingredients);
 
-// Spread to make new object from another object
+Spread to make new object from another object
 const restaurantNew = {
   owner: 'Anatoly Novikov',
   ...restaurant,
@@ -85,7 +96,7 @@ const restaurantNew = {
 };
 console.log(restaurantNew);
 
-// Spread to make a shallow copy of an object
+Spread to make a shallow copy of an object
 const restaurantCopy = { ...restaurant };
 restaurantCopy.name = 'Coliseum';
 console.log(restaurant.name);
@@ -93,7 +104,7 @@ console.log(restaurantCopy.name);
 restaurantCopy.mainMenu = [...restaurantCopy.mainMenu, 'Tiramisu'];
 console.log(restaurant.mainMenu);
 console.log(restaurantCopy.mainMenu);
-// Inner object stay the same
+Inner object stay the same
 restaurantCopy.openingHours.fri.open = 9;
 console.log(restaurant.openingHours.fri.open);
 console.log(restaurantCopy.openingHours.fri.open);
