@@ -33,6 +33,9 @@ const restaurant = {
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${adress} at ${time}`
     );
   },
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here's your pasta with ${ing1}, ${ing2} and ${ing3}`);
+  },
 };
 
 // Spread operator to add array elements to new array
@@ -66,6 +69,12 @@ console.log(strToArr);
 console.log(strToArrAdd);
 console.log(...strToArrAdd);
 
+const ingredients = [
+  prompt('Choose ingredient 1'),
+  prompt('Choose ingredient 2'),
+  prompt('Choose ingredient 3'),
+];
+restaurant.orderPasta(...ingredients);
 /*
 -- OBJECT DESTRUCTURING --
 Passing multiple arguments to function as a singular object.
