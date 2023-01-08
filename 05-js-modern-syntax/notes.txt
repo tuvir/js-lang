@@ -26,4 +26,7 @@ SPREAD OPERATOR
 REST PATTERN AND PARAMETERS
 - Rest pattern has the same syntax as spread operator - '...'. But it does the opposite thing: it takes individual elements and forms an array out of them. When spread operator is used AFTER the '=' operator, usually when we add new elements to another array, rest pattern used BEFORE the '='. It takes remaining elements of one array and forms another array with them. This is used in destructuring.
 - Rest pattern DO NOT include any items that were skipped by destructuring. It will only include remaining items, which is why it ALWAYS should be placed in the end of the destructuring assignment.
+- There should be only one rest pattern in each destructuring assignment.
+- Rest works with object destructuring as well. We can select some properties as individual variables and the rest will be combined with rest pattern.
+- You can use rest to make fuctions with any given number of arguments. We simply include one rest parameter as function argument, like this - 'function sum (...nembers)'. After we pass the multiple arguments to function, rest will create an array out of them. Function then runs through array and performs the needed operation.
 

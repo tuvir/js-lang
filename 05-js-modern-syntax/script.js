@@ -37,7 +37,9 @@ const restaurant = {
     console.log(`Here's your pasta with ${ing1}, ${ing2} and ${ing3}`);
   },
 };
-// Rest pattern with destructuring
+
+// 1) Destructuring with rest
+// Rest pattern with array destructuring
 const [a, b, ...others] = [1, 2, 3, 4, 5];
 console.log(a, b, others);
 
@@ -47,6 +49,25 @@ const [, pasta, risotto, ...otherFood] = [
 ];
 
 console.log(pasta, risotto, otherFood);
+
+// Rest with object destructuring
+const { sat: saturday, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+console.log(saturday);
+
+// 2) Functions with rest
+
+function sum(...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(sum);
+}
+
+sum(1, 2, 3, 4);
+sum(10, 15);
+sum(7, 1, 10, 3, 6);
 /*
 -- SPREAD OPERATOR USAGE --
 Spread operator to add array elements to new array
