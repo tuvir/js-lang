@@ -29,4 +29,5 @@ REST PATTERN AND PARAMETERS
 - There should be only one rest pattern in each destructuring assignment.
 - Rest works with object destructuring as well. We can select some properties as individual variables and the rest will be combined with rest pattern.
 - You can use rest to make fuctions with any given number of arguments. We simply include one rest parameter as function argument, like this - 'function sum (...nembers)'. After we pass the multiple arguments to function, rest will create an array out of them. Function then runs through array and performs the needed operation.
+- We can pass array to function as individiual elements, using spread, and then put them in the array with rest pattern inside the function body.
 

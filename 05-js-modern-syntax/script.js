@@ -36,6 +36,12 @@ const restaurant = {
   orderPasta: function (ing1, ing2, ing3) {
     console.log(`Here's your pasta with ${ing1}, ${ing2} and ${ing3}`);
   },
+  orderPizza: function (mainIng, ...optionalIngs) {
+    console.log(optionalIngs);
+    optionalIngs.length
+      ? console.log(`Here is your pasta with ${mainIng} and ${optionalIngs}`)
+      : console.log(`Here is your pasta with ${mainIng}. No addings.`);
+  },
 };
 
 // 1) Destructuring with rest
@@ -68,6 +74,9 @@ function sum(...numbers) {
 sum(1, 2, 3, 4);
 sum(10, 15);
 sum(7, 1, 10, 3, 6);
+
+restaurant.orderPizza('Tomato');
+restaurant.orderPizza('Tomato', 'Basil', 'Cheese', 'Mushrooms', 'spinach');
 /*
 -- SPREAD OPERATOR USAGE --
 Spread operator to add array elements to new array
