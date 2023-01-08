@@ -18,5 +18,7 @@ OBJECT DESTRUCTURING
 
 SPREAD OPERATOR
 - Spread operator allows us to include elements from whole array, with a single use of operator instead of looping or manual adding. Syntax example: 'arr1 = [1, 2, 3]; arr2 = [...arr1, 4, 5]'. This will include all the array elements from the first array in any place of another array.
-- Another usage of spread operator is to pass multiple values into function, by passing an array with '...' before it. Basically, when we need array elements individually we use spread operator.
+- Another usage of spread operator is to pass multiple values into function, by passing an array with '...' before it. Basically, when we need array elements individually divided by commas we use spread operator. Usually when we unpack an array or pass arguments to the function.
 - While spread is similiar to array destructuring, the difference is that spread takes ALL elements from an array in order and it doesn't create new variables.
+- Spread works on all 'iterables'. Iterables in JS are arrays, strings, maps and sets, but NOT objects. We can use it to divide string into array of it's individual symbols or add symbols to string-array.
+

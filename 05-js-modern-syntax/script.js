@@ -58,6 +58,14 @@ console.log(mainMenyCopy);
 const menuWhole = [...restaurant.mainMenu, ...restaurant.starterMenu];
 console.log(menuWhole);
 
+// Spread to divide string into singular elements
+const str = 'Kulikov';
+const strToArr = [...str];
+const strToArrAdd = [...str, 'P.', 'S.'];
+console.log(strToArr);
+console.log(strToArrAdd);
+console.log(...strToArrAdd);
+
 /*
 -- OBJECT DESTRUCTURING --
 Passing multiple arguments to function as a singular object.
