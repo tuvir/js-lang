@@ -53,6 +53,11 @@ function spread(arr) {
 // Spread operator to copy an array;
 const mainMenyCopy = [...restaurant.mainMenu];
 console.log(mainMenyCopy);
+
+// Spread to join multiple arrays
+const menuWhole = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(menuWhole);
+
 /*
 -- OBJECT DESTRUCTURING --
 Passing multiple arguments to function as a singular object.
