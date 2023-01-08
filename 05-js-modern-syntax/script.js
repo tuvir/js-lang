@@ -28,7 +28,22 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+  delivery: function ({ starterIndex, mainIndex, adress, time }) {
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${adress} at ${time}`
+    );
+  },
+  // hours: function (dayTag) {
+  //   return [this.openingHours{${dayTag}}]
+  // }
 };
+
+restaurant.delivery({
+  time: '12:20',
+  adress: 'Respubliki 22 st',
+  starterIndex: 1,
+  mainIndex: 0,
+});
 
 // Using destructuring on objects
 const { name, openingHours, categories } = restaurant;
@@ -58,6 +73,11 @@ const obj = {
 ({ a, b } = obj);
 console.log(a, b);
 
+// Nested obj destructuring
+const {
+  fri: { open, close },
+} = openingHours;
+console.log(open, close);
 // Changing the name of mutable variable
 // let {a: first, b: second} = obj;
 
