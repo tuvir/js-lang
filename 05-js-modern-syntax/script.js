@@ -69,12 +69,34 @@ console.log(strToArr);
 console.log(strToArrAdd);
 console.log(...strToArrAdd);
 
+// Spread function
 const ingredients = [
-  prompt('Choose ingredient 1'),
-  prompt('Choose ingredient 2'),
-  prompt('Choose ingredient 3'),
+  // prompt('Choose ingredient 1'),
+  // prompt('Choose ingredient 2'),
+  // prompt('Choose ingredient 3'),
 ];
 restaurant.orderPasta(...ingredients);
+
+// Spread to make new object from another object
+const restaurantNew = {
+  owner: 'Anatoly Novikov',
+  ...restaurant,
+  foundingYear: 2007,
+};
+console.log(restaurantNew);
+
+// Spread to make a shallow copy of an object
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Coliseum';
+console.log(restaurant.name);
+console.log(restaurantCopy.name);
+restaurantCopy.mainMenu = [...restaurantCopy.mainMenu, 'Tiramisu'];
+console.log(restaurant.mainMenu);
+console.log(restaurantCopy.mainMenu);
+// Inner object stay the same
+restaurantCopy.openingHours.fri.open = 9;
+console.log(restaurant.openingHours.fri.open);
+console.log(restaurantCopy.openingHours.fri.open);
 /*
 -- OBJECT DESTRUCTURING --
 Passing multiple arguments to function as a singular object.

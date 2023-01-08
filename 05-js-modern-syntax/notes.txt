@@ -21,4 +21,6 @@ SPREAD OPERATOR
 - Another usage of spread operator is to pass multiple values into function, by passing an array with '...' before it. Basically, when we need array elements individually divided by commas we use spread operator. Usually when we unpack an array or pass arguments to the function.
 - While spread is similiar to array destructuring, the difference is that spread takes ALL elements from an array in order and it doesn't create new variables.
 - Spread works on all 'iterables'. Iterables in JS are arrays, strings, maps and sets, but NOT objects. We can use it to divide string into array of it's individual symbols or add symbols to string-array.
+- From ES 2018 spread also works on objects. It can be used to make shallow copies of objects or create new objects based on the already existing objects.
+
 
