@@ -16,3 +16,7 @@ OBJECT DESTRUCTURING
 - You can mutate the variable value to the object variable value, using OD. Example: 'let a = 1, b = 2; const obj = {a: 10, b: 20,}; ({a, b}) = obj'. In this case a and b values will mutate to 10 and 20. The usage of braces is required, since we can't evaluate a block to anything.
 - Object destructuring can be used to send an object as a function argument, by destructuring it's properties in individual variables and then using them in the function. To do that, we pass object with object exact property names and then we use then in the function body as regular varaibles.
 
+SPREAD OPERATOR
+- Spread operator allows us to include elements from whole array, with a single use of operator instead of looping or manual adding. Syntax example: 'arr1 = [1, 2, 3]; arr2 = [...arr1, 4, 5]'. This will include all the array elements from the first array in any place of another array.
+- Another usage of spread operator is to pass multiple values into function, by passing an array with '...' before it. Basically, when we need array elements individually we use spread operator.
+- While spread is similiar to array destructuring, the difference is that spread takes ALL elements from an array in order and it doesn't create new variables.

@@ -33,11 +33,29 @@ const restaurant = {
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${adress} at ${time}`
     );
   },
-  // hours: function (dayTag) {
-  //   return [this.openingHours{${dayTag}}]
-  // }
 };
 
+// Spread operator to add array elements to new array
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5, 6];
+console.log(arr2);
+
+const menuNew = [...restaurant.mainMenu, 'Fettucine', 'Tiramisu'];
+console.log(menuNew);
+
+// Spread operator to pass multiple arguments to function
+const arr3 = [10, 20, 30, 2];
+spread(...arr3);
+function spread(arr) {
+  console.log(arguments);
+}
+
+// Spread operator to copy an array;
+const mainMenyCopy = [...restaurant.mainMenu];
+console.log(mainMenyCopy);
+/*
+-- OBJECT DESTRUCTURING --
+Passing multiple arguments to function as a singular object.
 restaurant.delivery({
   time: '12:20',
   adress: 'Respubliki 22 st',
@@ -45,11 +63,11 @@ restaurant.delivery({
   mainIndex: 0,
 });
 
-// Using destructuring on objects
+Using destructuring on objects
 const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);
 
-// Renaming the obj destructured variables
+Renaming the obj destructured variables
 const {
   name: restaurantName,
   openingHours: hours,
@@ -57,11 +75,11 @@ const {
 } = restaurant;
 console.log(restaurantName, hours, sections);
 
-// Giving default values to obj destructured variables
+Giving default values to obj destructured variables
 const { menu = [], mainMenu: main = [] } = restaurant;
 console.log(menu, main);
 
-// Mutating variables using obj destructuring
+Mutating variables using obj destructuring
 let a = 10,
   b = 20;
 const obj = {
@@ -73,13 +91,13 @@ const obj = {
 ({ a, b } = obj);
 console.log(a, b);
 
-// Nested obj destructuring
+Nested obj destructuring
 const {
   fri: { open, close },
 } = openingHours;
 console.log(open, close);
-// Changing the name of mutable variable
-// let {a: first, b: second} = obj;
+Changing the name of mutable variable
+let {a: first, b: second} = obj;
 
 /*
 -- DESTRUCTURING ARRAYS --
