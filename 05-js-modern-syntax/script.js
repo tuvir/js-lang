@@ -44,6 +44,18 @@ const restaurant = {
   },
 };
 
+const restaurant1 = {
+  name: 'Roma',
+  numGuests: 23,
+};
+const restaurant2 = {
+  name: 'Piazzo',
+  owner: 'Giancarlo',
+};
+restaurant1.numGuests = restaurant1.numGuests || 10;
+restaurant2.numGuests = restaurant2.numGuests || 10;
+
+console.log(restaurant1.numGuests, restaurant2.numGuests);
 /*
 -- NULLISH COALISCENT OPERATOR --
 restaurant.numGuests = 0;

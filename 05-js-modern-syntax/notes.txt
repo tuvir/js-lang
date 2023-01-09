@@ -42,4 +42,9 @@ SHORT CIRCUITING (&& AND ||)
 
 NULLISH COALESCING OPERATOR '??'
 - Nullish coalescing operator is a better way to set up default values instead of using '||' shotr circuiting. Instead of 'falsy' values, NCO establishees 'nullish' values, which are only 'undefined' and 'null'. When meeting 0, which is a falsy value, SC would skipped it and move to other value. But NCO will take this value as valid. 
-- Example: 'const guest = 0 ?? 10'. This will result in guest getting '0', where '||' SC would give it '10'. 
+- Example: 'const guest = 0 ?? 10'. This will result in guest getting '0', where '||' SC would give it '10'.
+
+LOGICAL ASSIGNMENT OPERATORS
+- Logical assignment operators are used to write one-line logical assignments in less code.
+- LA '||=' example: 'guestNum ||= 10'. If guestNum property will be falsy, it will be assigned '10', other way, it will have the same truthy value.
+- LA '??=' can be used to avoid falsy value short ciruiting on '||=' operator.
