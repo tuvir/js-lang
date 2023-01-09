@@ -39,3 +39,7 @@ SHORT CIRCUITING (&& AND ||)
 - SC on '&&' does the same thing, but works in opposite way - it stops checking the values of logical expression, if it meets the falsy value.
 - SC on '&&' will return first falsy value or last truthy value, preserving the type of the value. It can be used instead of single 'if' statement. Example: 'restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'tomato')' '&&' initially checks if method exists, and if so, calls it with needed parameters. If it doesn't exist, it will not be called.
 - Short circuiting is a good tool, but it should be used with modertaion, because it makes code readability worse.
+
+NULLISH COALESCING OPERATOR '??'
+- Nullish coalescing operator is a better way to set up default values instead of using '||' shotr circuiting. Instead of 'falsy' values, NCO establishees 'nullish' values, which are only 'undefined' and 'null'. When meeting 0, which is a falsy value, SC would skipped it and move to other value. But NCO will take this value as valid. 
+- Example: 'const guest = 0 ?? 10'. This will result in guest getting '0', where '||' SC would give it '10'. 

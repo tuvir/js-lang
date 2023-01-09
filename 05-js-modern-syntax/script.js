@@ -44,7 +44,15 @@ const restaurant = {
   },
 };
 
-// Logical operators can use ANY data type, can return ANY data type and are capable of short-circuiting
+/*
+-- NULLISH COALISCENT OPERATOR --
+restaurant.numGuests = 0;
+const guests = restaurant.numGuests || 10;
+const guests2 = restaurant.numGuests ?? 10;
+console.log(guests, guests2);
+/*
+-- SHORT CIRCUITING --
+Logical operators can use ANY data type, can return ANY data type and are capable of short-circuiting
 console.log('-- OR --');
 console.log(3 || 'Petr');
 console.log('' || 0);
