@@ -46,5 +46,7 @@ NULLISH COALESCING OPERATOR '??'
 
 LOGICAL ASSIGNMENT OPERATORS
 - Logical assignment operators are used to write one-line logical assignments in less code.
-- LA '||=' example: 'guestNum ||= 10'. If guestNum property will be falsy, it will be assigned '10', other way, it will have the same truthy value.
-- LA '??=' can be used to avoid falsy value short ciruiting on '||=' operator.
+- LA '||=' example: 'guestNum ||= 10'. If guestNum property will be falsy, it will be assigned '10', other way, it will have the same truthy value. The LA '||' will assign a value to variable if it's falsy.
+- LA '??=' can be used to avoid falsy value short ciruiting on '||=' operator. It will assign a value to the variable of the variable is exactly nullish (undefined or null).
+- LA '&&=' is used to assign a value to the variable if the variable is truthy. With it we can change the variable value, if it's truthy, or do nothing elsewise.
+

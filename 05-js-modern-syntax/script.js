@@ -46,16 +46,27 @@ const restaurant = {
 
 const restaurant1 = {
   name: 'Roma',
-  numGuests: 23,
+  numGuests: 0,
 };
 const restaurant2 = {
   name: 'Piazzo',
   owner: 'Giancarlo',
 };
-restaurant1.numGuests = restaurant1.numGuests || 10;
-restaurant2.numGuests = restaurant2.numGuests || 10;
 
-console.log(restaurant1.numGuests, restaurant2.numGuests);
+// Assignment '||'
+// restaurant1.numGuests ||= 10;
+// restaurant2.numGuests ||= 10;
+
+// Assignment '??'
+restaurant1.numGuests ??= 10;
+restaurant2.numGuests ??= 10;
+
+// Assignment '&&'
+restaurant1.owner &&= 'ANONIMUS';
+restaurant2.owner &&= 'ANONIMUS';
+console.log(restaurant1);
+console.log(restaurant2);
+
 /*
 -- NULLISH COALISCENT OPERATOR --
 restaurant.numGuests = 0;
