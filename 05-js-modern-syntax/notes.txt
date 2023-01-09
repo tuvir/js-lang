@@ -10,7 +10,7 @@ ARRAY DESTRUCTURING
 
 OBJECT DESTRUCTURING
 - Object destructuring allows you to unpack specific values of object properties as variables. We create a variable list using '{}' in which we add variables with exact same names of object properties, that we want to extract. Example: 'const {firstName, age, gender} = object'.
-- We can give individual names to the object variables, to make them more distinct from object properties names. Example: 'const {firstName: personName, age: personAge, gender: personSex}'. We then use new variable names when we need to use them.
+- We can give individual names to the object variables, to make them more distinct from object properties names. Example: 'const {firstName: personName, age: personAge, gender}'. We then use new variable names when we need to use them.
 - Object destructuring is a very powerful tool that is often used to extract values from API' calls, which usually come as objects.
 - You can give default values for destructured object variables in case you do not know which properties will present on an object. Example: 'const {height = 'def', firstName = []}'.
 - You can mutate the variable value to the object variable value, using OD. Example: 'let a = 1, b = 2; const obj = {a: 10, b: 20,}; ({a, b}) = obj'. In this case a and b values will mutate to 10 and 20. The usage of braces is required, since we can't evaluate a block to anything.
@@ -28,6 +28,11 @@ REST PATTERN AND PARAMETERS
 - Rest pattern DO NOT include any items that were skipped by destructuring. It will only include remaining items, which is why it ALWAYS should be placed in the end of the destructuring assignment.
 - There should be only one rest pattern in each destructuring assignment.
 - Rest works with object destructuring as well. We can select some properties as individual variables and the rest will be combined with rest pattern.
-- You can use rest to make fuctions with any given number of arguments. We simply include one rest parameter as function argument, like this - 'function sum (...nembers)'. After we pass the multiple arguments to function, rest will create an array out of them. Function then runs through array and performs the needed operation.
+- You can use rest to make fuctions with any given number of arguments. We simply include one rest parameter as function argument, like this - 'function sum (...numbers)'. After we pass the multiple arguments to function, rest will create an array out of them. Function then runs through array and performs the needed operation.
 - We can pass array to function as individiual elements, using spread, and then put them in the array with rest pattern inside the function body.
 
+SHORT CIRCUITING (&& AND ||)
+- We can use logical operators '||' and '&&' with non-boolean values. And the returned value of these operators might be not boolean as well.
+- Shot circuiting is a feature whrere JS breaks the process of checking the values of logical operators and IMMEDIATLY returning the the first one that matches the condition. Example; 'const bool = (3 || 'Petr')' will be '3', because - 1. '3' is a first truthy value of them, therefore '||' operator returns it without even checking the rest. 2. The '||' operator can return non-boolean values.
+- SC can be used to set default values much easier. Example: 'const guests1 = restaurant.numGuests || 10' If 'numGuests' property exists and has a value, it will be assigned to the 'guests1' variable. If it doesn't exist, '10' will be given instead.
+- In short, SC on '||' operator returns either first truthy value or last falsy value, while preserving it's data type.

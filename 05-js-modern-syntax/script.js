@@ -44,8 +44,15 @@ const restaurant = {
   },
 };
 
-// 1) Destructuring with rest
-// Rest pattern with array destructuring
+// Logical operators can use ANY data type, can return ANY data type and are capable of short-circuiting
+console.log(3 || 'Petr');
+console.log('' || 0);
+console.log(true || null);
+console.log('' || undefined || 'str' || 1 || true);
+/*
+-- REST PATTERN --
+1) Destructuring with rest
+Rest pattern with array destructuring
 const [a, b, ...others] = [1, 2, 3, 4, 5];
 console.log(a, b, others);
 
@@ -56,12 +63,12 @@ const [, pasta, risotto, ...otherFood] = [
 
 console.log(pasta, risotto, otherFood);
 
-// Rest with object destructuring
+Rest with object destructuring
 const { sat: saturday, ...weekdays } = restaurant.openingHours;
 console.log(weekdays);
 console.log(saturday);
 
-// 2) Functions with rest
+2) Functions with rest
 
 function sum(...numbers) {
   let sum = 0;
