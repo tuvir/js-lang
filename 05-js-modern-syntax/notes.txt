@@ -34,5 +34,8 @@ REST PATTERN AND PARAMETERS
 SHORT CIRCUITING (&& AND ||)
 - We can use logical operators '||' and '&&' with non-boolean values. And the returned value of these operators might be not boolean as well.
 - Shot circuiting is a feature whrere JS breaks the process of checking the values of logical operators and IMMEDIATLY returning the the first one that matches the condition. Example; 'const bool = (3 || 'Petr')' will be '3', because - 1. '3' is a first truthy value of them, therefore '||' operator returns it without even checking the rest. 2. The '||' operator can return non-boolean values.
-- SC can be used to set default values much easier. Example: 'const guests1 = restaurant.numGuests || 10' If 'numGuests' property exists and has a value, it will be assigned to the 'guests1' variable. If it doesn't exist, '10' will be given instead.
+- SC on '||' can be used to set default values much easier. Example: 'const guests1 = restaurant.numGuests || 10' If 'numGuests' property exists and has a value, it will be assigned to the 'guests1' variable. If it doesn't exist, '10' will be given instead.
 - In short, SC on '||' operator returns either first truthy value or last falsy value, while preserving it's data type.
+- SC on '&&' does the same thing, but works in opposite way - it stops checking the values of logical expression, if it meets the falsy value.
+- SC on '&&' will return first falsy value or last truthy value, preserving the type of the value. It can be used instead of single 'if' statement. Example: 'restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'tomato')' '&&' initially checks if method exists, and if so, calls it with needed parameters. If it doesn't exist, it will not be called.
+- Short circuiting is a good tool, but it should be used with modertaion, because it makes code readability worse.

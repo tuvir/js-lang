@@ -45,10 +45,18 @@ const restaurant = {
 };
 
 // Logical operators can use ANY data type, can return ANY data type and are capable of short-circuiting
+console.log('-- OR --');
 console.log(3 || 'Petr');
 console.log('' || 0);
 console.log(true || null);
 console.log('' || undefined || 'str' || 1 || true);
+
+console.log('-- AND --');
+console.log(3 && 'Petr');
+console.log('' && 0);
+console.log(true && null);
+console.log('' && undefined && 'str' && 1 && true);
+console.log('name' && 1 && true && 10 && 'true' && 'Petr');
 /*
 -- REST PATTERN --
 1) Destructuring with rest
