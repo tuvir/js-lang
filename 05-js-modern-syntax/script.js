@@ -52,16 +52,17 @@ const restaurant2 = {
   name: 'Piazzo',
   owner: 'Giancarlo',
 };
+/*
+-- LOGICAL ASSIGNMENT OPERATORS --
+Assignment '||'
+restaurant1.numGuests ||= 10;
+restaurant2.numGuests ||= 10;
 
-// Assignment '||'
-// restaurant1.numGuests ||= 10;
-// restaurant2.numGuests ||= 10;
-
-// Assignment '??'
+Assignment '??'
 restaurant1.numGuests ??= 10;
 restaurant2.numGuests ??= 10;
 
-// Assignment '&&'
+Assignment '&&'
 restaurant1.owner &&= 'ANONIMUS';
 restaurant2.owner &&= 'ANONIMUS';
 console.log(restaurant1);
