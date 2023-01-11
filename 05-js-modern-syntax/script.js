@@ -52,6 +52,15 @@ const restaurant2 = {
   name: 'Piazzo',
   owner: 'Giancarlo',
 };
+
+const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// 'for of' loop usage
+for (const item of menu) console.log(item);
+
+for (const [index, element] of menu.entries()) {
+  console.log(`${index + 1}: ${element}`);
+}
+
 /*
 -- LOGICAL ASSIGNMENT OPERATORS --
 Assignment '||'

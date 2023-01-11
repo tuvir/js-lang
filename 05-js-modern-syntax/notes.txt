@@ -50,3 +50,6 @@ LOGICAL ASSIGNMENT OPERATORS
 - LA '??=' can be used to avoid falsy value short ciruiting on '||=' operator. It will assign a value to the variable of the variable is exactly nullish (undefined or null).
 - LA '&&=' is used to assign a value to the variable if the variable is truthy. With it we can change the variable value, if it's truthy, or do nothing elsewise.
 
+FOR-OF LOOP
+- 'for of' loop can be used to loop over arrays without the initialization of counter, condition and counter-changing. Example: 'for(const item of arr) console.log(item)'. This will create an item variable, that is going to be assigned to each of the array elements through each iteration. This loop is useful when going over node lists.
+- 'for of' loop allows you to use both break and continue.
