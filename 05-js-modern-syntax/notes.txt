@@ -53,3 +53,8 @@ LOGICAL ASSIGNMENT OPERATORS
 FOR-OF LOOP
 - 'for of' loop can be used to loop over arrays without the initialization of counter, condition and counter-changing. Example: 'for(const item of arr) console.log(item)'. This will create an item variable, that is going to be assigned to each of the array elements through each iteration. This loop is useful when going over node lists.
 - 'for of' loop allows you to use both break and continue.
+
+ES6 NEW OBJECT LITERALS
+- To add an object inside another object we can simply write the name of the addible object as a property inside the other object.
+- To declare a method inside object literal it is no longer neccecary to write it as a property with function keyword. Instead,  do this - 'methodName(argument1, argument2) {function body}'.
+- The name of object property can now be made out of scratch on the go, using almost any given expression. Example: 'open: {fri: 'yes', sun: 'no'} = ['o' + 'pen']: {fri: 'yes', sun: 'no'}'
