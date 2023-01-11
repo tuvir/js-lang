@@ -58,3 +58,9 @@ ES6 NEW OBJECT LITERALS
 - To add an object inside another object we can simply write the name of the addible object as a property inside the other object.
 - To declare a method inside object literal it is no longer neccecary to write it as a property with function keyword. Instead,  do this - 'methodName(argument1, argument2) {function body}'.
 - The name of object property can now be made out of scratch on the go, using almost any given expression. Example: 'open: {fri: 'yes', sun: 'no'} = ['o' + 'pen']: {fri: 'yes', sun: 'no'}'
+
+OPTIONAL CHAINING
+- Optional chaining (?.) allows us to check if certain thing is present on the object (property, method, or value at certain array index). If certain value does not exist and we try to interract with it, this will result in an error. But if we use OC to try to access this value, we will get 'undefined' istead.
+- Example: 'console.log(object.propertyNotExist.objectProperty) = error; console.log(object.propertyNotExist?.objectProperty) = undefined'.
+- OC works the same as NCO, in a way that it will return any non-nullish value. If the object property isn't present, it is 'undefined' which can be returned by OC.
+- OC is made to be used together with NCO. If value is not present OC will result in 'undefined' which NCO will treat as nullish value and give us the default value instead. This is a great way to check if something is present and if not, deliver a meaningful message about it.

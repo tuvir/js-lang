@@ -57,7 +57,28 @@ const restaurant2 = {
   name: 'Piazzo',
   owner: 'Giancarlo',
 };
-console.log(restaurant);
+console.log(restaurant.openingHours.mon?.open);
+const weekDays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+// Optional chaining on object properties
+for (const day of weekDays) {
+  const open = restaurant.openingHours[day]?.open ?? -1;
+  if (open === -1) {
+    console.log(`We are closed on ${day}`);
+  } else {
+    console.log(`On ${day} we open at ${open}`);
+  }
+}
+
+// Optional chaining on object methods
+console.log(restaurant.order?.(0, 2) ?? 'No method');
+console.log(restaurant.orderFood?.(0, 2) ?? 'No method');
+
+// Optional chaining on arrays
+console.log(weekDays?.[1] ?? 'No index');
+console.log(weekDays?.[10] ?? 'No index');
+const arrObj = [{ role: 'support', lane: 'bottom' }];
+console.log(arrObj[0]?.role ?? 'No role');
 
 /*
 -- FOR OF LOOP --
