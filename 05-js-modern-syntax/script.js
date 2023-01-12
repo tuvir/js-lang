@@ -57,10 +57,45 @@ const restaurant2 = {
   name: 'Piazzo',
   owner: 'Giancarlo',
 };
+
+// Looping through object properties NAMES
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+console.log(`We are open ${properties.length} days a week!`);
+
+for (const key of Object.keys(openingHours)) {
+  console.log(key);
+}
+
+let workingStr = `We're open ${properties.length} days a week, on: `;
+for (const day of Object.keys(openingHours)) {
+  workingStr += `${day}, `;
+}
+console.log(workingStr);
+
+// Looping through object properties VALUES
+const values = Object.values(openingHours);
+console.log(values);
+let i = 0;
+// for (const key of properties) {
+//   const { open, close } = values[i];
+//   console.log(`On ${key} we are open at ${open} and closed at ${close}`);
+//   i++;
+// }
+
+// Looping through object ENTRIES
+const entries = Object.entries(openingHours);
+for (const entry of entries) {
+  const [day, { open, close }] = entry;
+  console.log(`On ${day} we are opening at ${open} and closing at ${close}`);
+}
+/*
+-- OPTIONAL CHAINING --
 console.log(restaurant.openingHours.mon?.open);
 const weekDays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
-// Optional chaining on object properties
+Optional chaining on object properties
 for (const day of weekDays) {
   const open = restaurant.openingHours[day]?.open ?? -1;
   if (open === -1) {
@@ -70,11 +105,11 @@ for (const day of weekDays) {
   }
 }
 
-// Optional chaining on object methods
+Optional chaining on object methods
 console.log(restaurant.order?.(0, 2) ?? 'No method');
 console.log(restaurant.orderFood?.(0, 2) ?? 'No method');
 
-// Optional chaining on arrays
+Optional chaining on arrays
 console.log(weekDays?.[1] ?? 'No index');
 console.log(weekDays?.[10] ?? 'No index');
 const arrObj = [{ role: 'support', lane: 'bottom' }];

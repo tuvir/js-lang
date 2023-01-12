@@ -64,3 +64,10 @@ OPTIONAL CHAINING
 - Example: 'console.log(object.propertyNotExist.objectProperty) = error; console.log(object.propertyNotExist?.objectProperty) = undefined'.
 - OC works the same as NCO, in a way that it will return any non-nullish value. If the object property isn't present, it is 'undefined' which can be returned by OC.
 - OC is made to be used together with NCO. If value is not present OC will result in 'undefined' which NCO will treat as nullish value and give us the default value instead. This is a great way to check if something is present and if not, deliver a meaningful message about it.
+
+LOOPING OVER OBJECTS
+- 'Object.keys()' method receives an object name as an argument and then gives an array with strings of object property names.
+- 'Object.valaues()' method receives an object name as an argument and then gives an array with strings of object properties.
+- Both of these methods can be used to loop over objects woth 'for of' loop.
+- 'Object.entries()' method receives an object name as an argument and then gives an array of arrays, each storing the property key(name) as first element and property vaue as second element. Property value type will be object, if the property itself is an object.
+- 'entries' ,ethod is a very powerful tool to loop over object, if used together with destructuring. Each etry can be destructured in multiple values and these values can then be processed.
